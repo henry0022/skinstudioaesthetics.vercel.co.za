@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: #f0fafa;
+  --color-foreground: #0b3b3c;
+  --color-surface: #fbffff;
+  --color-muted: #d6efee;
+  --color-muted-foreground: #5a7f7f;
+  --color-primary: #14b8a6;
+  --color-primary-foreground: #f0fafa;
+  --color-ink: #0b3b3c;
+  --color-border: rgba(11, 59, 60, 0.1);
+
+  --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
+
+  --radius: 1.5rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+}
+
+@utility tracking-luxe {
+  letter-spacing: 0.32em;
+}
+
+@utility font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Image placeholder treatment carried over from the original studio site */
+@utility ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(11, 59, 60, 0.45);
+  background-color: var(--color-muted);
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(20, 184, 166, 0.16) 100%
+  );
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.8s ease both;
+}
