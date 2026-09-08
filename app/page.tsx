@@ -74,17 +74,34 @@ export default function HomePage() {
 
             <div className="mt-6 rounded-[1.5rem] border border-foreground/10 bg-surface/80 p-6 shadow-[0_20px_35px_-28px_rgba(20,58,66,0.35)]">
               <p className="text-[11px] tracking-luxe uppercase text-accent mb-3">
-                Discover the true artistry
+                Discover the true artistry of beautiful,healthy skin
               </p>
               <p className="text-sm leading-relaxed text-foreground/70 font-light">
                 With over 14 years of experience as a Dermal Estetition, Bianca
                 Mc Cree has built her career around a genuine passion for
                 aesthetic skincare, skin health and helping clients feel
-                confident in their own skin. At Skin Studio Aesthetics, every
-                treatment is approached with knowledge, precision and a deep
-                understanding of the skin — creating visible, meaningful results
-                that leave clients feeling confident, cared for and truly
-                satisfied.
+                confident in their own skin.
+              </p>
+              <p className="text-sm leading-relaxed text-foreground/70 font-light mt-4">
+                At Skin Studio Aesthetics, every treatment is approached with
+                knowledge, precision and a deep understanding of the skin.
+                Bianca’s passion lies not only in delivering advanced aesthetic
+                treatments, but in creating visible, meaningful results that leave
+                clients feeling confident, cared for and truly satisfied.
+              </p>
+              <p className="text-sm leading-relaxed text-foreground/70 font-light mt-4">
+                We believe that beautiful skin is about more than appearance. It
+                is about healthy, confident and radiant skin — achieved through
+                personalised treatments, professional expertise and a commitment
+                to excellence.
+              </p>
+              <p className="text-sm leading-relaxed text-foreground/70 font-light mt-4">
+                From advanced skin rejuvenation and corrective skincare to tailored
+                aesthetic treatments, every treatment journey is carefully designed
+                around your individual skin concerns and goals.
+              </p>
+              <p className="text-sm leading-relaxed text-foreground/70 font-light mt-4">
+                Your skin deserves expertise. Your results deserve dedication.
               </p>
             </div>
           </div>
