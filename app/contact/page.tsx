@@ -19,9 +19,9 @@ export default function ContactPage() {
       />
 
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-24">
-        <div className="bg-surface rounded-[2.5rem] shadow-[0_30px_70px_-40px_rgba(11,59,60,0.4)] overflow-hidden grid lg:grid-cols-2">
+        <div className="bg-surface rounded-[2.5rem] shadow-[0_30px_70px_-40px_rgba(20,58,66,0.4)] overflow-hidden grid lg:grid-cols-2">
           <div className="p-9 sm:p-12 lg:p-14">
-            <span className="inline-block text-[11px] tracking-luxe uppercase text-primary mb-5">
+            <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-5">
               Reservations
             </span>
             <h2 className="font-serif text-4xl font-medium leading-tight mb-5">
@@ -34,39 +34,39 @@ export default function ContactPage() {
 
             <dl className="space-y-5 text-sm">
               <div className="flex items-center gap-4">
-                <dt className="text-[10px] tracking-luxe uppercase text-primary w-16 shrink-0">
+                <dt className="text-[10px] tracking-luxe uppercase text-accent w-16 shrink-0">
                   Call
                 </dt>
                 <dd>
                   <a
                     href={studio.phoneHref}
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-accent transition-colors"
                   >
                     {studio.phone}
                   </a>
                 </dd>
               </div>
               <div className="flex items-center gap-4">
-                <dt className="text-[10px] tracking-luxe uppercase text-primary w-16 shrink-0">
+                <dt className="text-[10px] tracking-luxe uppercase text-accent w-16 shrink-0">
                   Email
                 </dt>
                 <dd>
                   <a
                     href={`mailto:${studio.email}`}
-                    className="hover:text-primary transition-colors break-all"
+                    className="hover:text-accent transition-colors break-all"
                   >
                     {studio.email}
                   </a>
                 </dd>
               </div>
               <div className="flex items-center gap-4">
-                <dt className="text-[10px] tracking-luxe uppercase text-primary w-16 shrink-0">
+                <dt className="text-[10px] tracking-luxe uppercase text-accent w-16 shrink-0">
                   Visit
                 </dt>
                 <dd>{studio.address}</dd>
               </div>
               <div className="flex items-center gap-4">
-                <dt className="text-[10px] tracking-luxe uppercase text-primary w-16 shrink-0">
+                <dt className="text-[10px] tracking-luxe uppercase text-accent w-16 shrink-0">
                   Hours
                 </dt>
                 <dd>{studio.hours}</dd>

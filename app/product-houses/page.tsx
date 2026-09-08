@@ -23,7 +23,7 @@ export default function ProductHousesPage() {
           {productHouses.map((house) => (
             <article
               key={house.name}
-              className="bg-surface rounded-3xl p-8 sm:p-10 flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-24px_rgba(11,59,60,0.3)]"
+              className="bg-surface rounded-3xl p-8 sm:p-10 flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-24px_rgba(20,58,66,0.3)]"
             >
               <div className="flex items-start justify-between gap-4 mb-4">
                 <h2 className="font-serif text-3xl">{house.name}</h2>
@@ -31,7 +31,7 @@ export default function ProductHousesPage() {
                   {house.origin}
                 </span>
               </div>
-              <span className="inline-block self-start text-[10px] tracking-luxe uppercase text-primary border border-primary/30 rounded-full px-3 py-1 mb-5">
+              <span className="inline-block self-start text-[10px] tracking-luxe uppercase text-accent border border-accent/30 rounded-full px-3 py-1 mb-5">
                 {house.focus}
               </span>
               <p className="text-sm font-light leading-relaxed text-foreground/65 mb-7">

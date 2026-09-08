@@ -1,15 +1,17 @@
 @import 'tailwindcss';
 
 @theme inline {
-  --color-background: #f0fafa;
-  --color-foreground: #0b3b3c;
-  --color-surface: #fbffff;
-  --color-muted: #d6efee;
-  --color-muted-foreground: #5a7f7f;
-  --color-primary: #14b8a6;
-  --color-primary-foreground: #f0fafa;
-  --color-ink: #0b3b3c;
-  --color-border: rgba(11, 59, 60, 0.1);
+  --color-background: #eaf4f6;
+  --color-foreground: #143a42;
+  --color-surface: #f8fcfd;
+  --color-muted: #cde4e9;
+  --color-muted-foreground: #5e7f88;
+  --color-primary: #7fb3be;
+  --color-primary-foreground: #12333a;
+  /* Darkened primary for small text on light surfaces (primary alone fails WCAG AA) */
+  --color-accent: #3c7383;
+  --color-ink: #143a42;
+  --color-border: rgba(20, 58, 66, 0.12);
 
   --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
@@ -54,12 +56,12 @@
   font-size: 0.62rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(11, 59, 60, 0.45);
+  color: rgba(20, 58, 66, 0.45);
   background-color: var(--color-muted);
   background-image: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.6) 0%,
-    rgba(20, 184, 166, 0.16) 100%
+    rgba(127, 179, 190, 0.28) 100%
   );
 }
 

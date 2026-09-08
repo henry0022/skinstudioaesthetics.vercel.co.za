@@ -19,13 +19,13 @@ export default function TreatmentsPage() {
         description="Every service begins with a reading of your skin, so results feel effortless and entirely your own."
       />
 
-      <nav className="border-b bg-surface">
+      <nav className="border-b bg-muted">
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-wrap justify-center gap-x-8 gap-y-2 text-[11px] tracking-luxe uppercase text-foreground/60">
           {treatmentCategories.map((category) => (
             <a
               key={category}
               href={`#${category.toLowerCase().replace(/\s+/g, '-')}`}
-              className="hover:text-primary transition-colors"
+              className="hover:text-accent transition-colors"
             >
               {category}
             </a>
@@ -48,7 +48,7 @@ export default function TreatmentsPage() {
               .map((treatment) => (
                 <article
                   key={treatment.slug}
-                  className="bg-surface rounded-3xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-24px_rgba(11,59,60,0.3)]"
+                  className="bg-surface rounded-3xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-24px_rgba(20,58,66,0.3)]"
                 >
                   <div className="ph h-44">Treatment Image</div>
                   <div className="p-7 flex flex-col flex-1">
@@ -70,7 +70,7 @@ export default function TreatmentsPage() {
                       </span>
                       <Link
                         href="/contact"
-                        className="text-xs tracking-luxe uppercase text-primary hover:text-ink transition-colors"
+                        className="text-xs tracking-luxe uppercase text-accent hover:text-ink transition-colors"
                       >
                         Enquire →
                       </Link>
@@ -100,7 +100,7 @@ export default function TreatmentsPage() {
             </li>
             <li>
               · Full pricing is on the{' '}
-              <Link href="/price-list" className="text-primary hover:text-ink transition-colors">
+              <Link href="/price-list" className="text-accent hover:text-ink transition-colors">
                 price list
               </Link>
               .

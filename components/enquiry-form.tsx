@@ -41,7 +41,7 @@ export function EnquiryForm() {
   }
 
   const fieldClass =
-    'w-full bg-transparent border-b border-foreground/25 py-2.5 focus:outline-none focus:border-primary transition-colors placeholder:text-foreground/30'
+    'w-full bg-transparent border-b border-foreground/25 py-2.5 focus:outline-none focus:border-accent transition-colors placeholder:text-foreground/30'
   const labelClass =
     'block text-[11px] tracking-luxe uppercase text-foreground/60 mb-2'
 
@@ -131,7 +131,7 @@ export function EnquiryForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="w-full bg-ink text-background py-4 rounded-full text-xs tracking-luxe uppercase mt-2 transition-all hover:-translate-y-0.5 hover:shadow-lg disabled:opacity-60 disabled:hover:translate-y-0"
+        className="w-full bg-primary text-primary-foreground py-4 rounded-full text-xs tracking-luxe uppercase mt-2 transition-all hover:-translate-y-0.5 hover:shadow-lg disabled:opacity-60 disabled:hover:translate-y-0"
       >
         {status === 'sending' ? 'Sending…' : 'Send Enquiry'}
       </button>
@@ -139,7 +139,7 @@ export function EnquiryForm() {
       <p
         aria-live="polite"
         className={`text-sm font-light min-h-5 ${
-          status === 'error' ? 'text-red-700' : 'text-primary'
+          status === 'error' ? 'text-red-700' : 'text-accent'
         }`}
       >
         {message}

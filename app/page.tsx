@@ -11,12 +11,12 @@ export default function HomePage() {
       <section className="max-w-6xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="animate-fade-up">
-            <span className="inline-block text-[11px] tracking-luxe uppercase text-primary mb-6">
+            <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-6">
               Cape Town · Skin Studio
             </span>
             <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.02] font-medium mb-7 text-balance">
               Skin that speaks{' '}
-              <span className="italic text-primary">quietly</span>, glows
+              <span className="italic text-accent">quietly</span>, glows
               loudly.
             </h1>
             <p className="text-base leading-relaxed text-foreground/70 max-w-md mb-9 font-light">
@@ -26,13 +26,13 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center gap-5">
               <Link
                 href="/contact"
-                className="bg-ink text-background px-8 py-4 rounded-full text-xs tracking-luxe uppercase transition-all hover:-translate-y-0.5 hover:shadow-lg"
+                className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-xs tracking-luxe uppercase transition-all hover:-translate-y-0.5 hover:shadow-lg"
               >
                 Book a Treatment
               </Link>
               <Link
                 href="/treatments"
-                className="text-sm tracking-wide border-b border-foreground/40 pb-1 hover:text-primary hover:border-primary transition-colors"
+                className="text-sm tracking-wide border-b border-foreground/40 pb-1 hover:text-accent hover:border-accent transition-colors"
               >
                 Explore menu
               </Link>
@@ -55,7 +55,7 @@ export default function HomePage() {
           </div>
 
           <div className="relative animate-fade-up">
-            <div className="relative w-full h-[440px] sm:h-[520px] rounded-[2rem] overflow-hidden shadow-[0_30px_60px_-30px_rgba(11,59,60,0.4)]">
+            <div className="relative w-full h-[440px] sm:h-[520px] rounded-[2rem] overflow-hidden shadow-[0_30px_60px_-30px_rgba(20,58,66,0.4)]">
               <Image
                 src="/images/hero.png"
                 alt="A guest receiving a facial treatment at Skin Studio Aesthetics"
@@ -67,7 +67,7 @@ export default function HomePage() {
             </div>
             <div className="absolute -top-5 -right-4 bg-surface rounded-2xl px-5 py-4 shadow-lg hidden sm:block">
               <div className="font-serif text-2xl leading-none">Glow</div>
-              <div className="text-[10px] tracking-luxe uppercase text-primary mt-1">
+              <div className="text-[10px] tracking-luxe uppercase text-accent mt-1">
                 Signature Facial
               </div>
             </div>
@@ -75,12 +75,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y bg-surface">
+      <section className="border-y bg-muted">
         <div className="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs sm:text-sm tracking-luxe uppercase text-foreground/60">
           {['Medical-Grade', 'Cruelty-Free', 'Bespoke Rituals', 'Zero Downtime', 'Quiet Luxury'].map(
             (value, i) => (
               <span key={value} className="flex items-center gap-6">
-                {i > 0 && <span className="text-primary">/</span>}
+                {i > 0 && <span className="text-accent">/</span>}
                 {value}
               </span>
             ),
@@ -90,7 +90,7 @@ export default function HomePage() {
 
       <section className="max-w-6xl mx-auto px-6 py-24">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block text-[11px] tracking-luxe uppercase text-primary mb-4">
+          <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-4">
             The Menu
           </span>
           <h2 className="font-serif text-4xl sm:text-5xl font-medium mb-4 text-balance">
@@ -106,7 +106,7 @@ export default function HomePage() {
           {featured.map((treatment, i) => (
             <article
               key={treatment.slug}
-              className={`bg-surface rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-24px_rgba(11,59,60,0.3)] ${
+              className={`bg-surface rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-24px_rgba(20,58,66,0.3)] ${
                 i === 1 ? 'md:-mt-6' : ''
               }`}
             >
@@ -123,7 +123,7 @@ export default function HomePage() {
                 <span className="font-serif text-xl">{treatment.price}</span>
                 <Link
                   href="/contact"
-                  className="text-xs tracking-luxe uppercase text-primary hover:text-ink transition-colors"
+                  className="text-xs tracking-luxe uppercase text-accent hover:text-ink transition-colors"
                 >
                   Book →
                 </Link>
@@ -135,34 +135,34 @@ export default function HomePage() {
         <div className="text-center mt-14">
           <Link
             href="/treatments"
-            className="text-sm tracking-wide border-b border-foreground/40 pb-1 hover:text-primary hover:border-primary transition-colors"
+            className="text-sm tracking-wide border-b border-foreground/40 pb-1 hover:text-accent hover:border-accent transition-colors"
           >
             View all treatments
           </Link>
         </div>
       </section>
 
-      <section className="bg-ink text-background py-24">
+      <section className="bg-primary text-ink py-24">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
           <div>
-            <span className="inline-block text-[11px] tracking-luxe uppercase text-primary mb-6">
+            <span className="inline-block text-[11px] tracking-luxe uppercase text-ink/70 mb-6">
               The Studio
             </span>
             <h2 className="font-serif text-4xl sm:text-5xl font-medium leading-tight mb-6 text-balance">
               A space designed to slow the world down.
             </h2>
-            <p className="text-background/75 leading-relaxed font-light mb-5">
+            <p className="text-ink/80 leading-relaxed font-light mb-5">
               Skin Studio Aesthetics pairs medical-grade expertise with the calm
               of a private retreat. Soft light, considered detail, and a team
               that listens before they touch.
             </p>
-            <p className="text-background/55 leading-relaxed font-light text-sm mb-9">
+            <p className="text-ink/65 leading-relaxed font-light text-sm mb-9">
               No rushed appointments, no one-size treatments — just skincare
               that respects your time and your skin.
             </p>
             <Link
               href="/about"
-              className="inline-block border border-background/40 px-8 py-4 rounded-full text-xs tracking-luxe uppercase hover:bg-background hover:text-ink transition-colors"
+              className="inline-block border border-ink/40 px-8 py-4 rounded-full text-xs tracking-luxe uppercase hover:bg-ink hover:text-primary transition-colors"
             >
               About the Studio
             </Link>
@@ -177,10 +177,10 @@ export default function HomePage() {
             ].map(([title, copy]) => (
               <li
                 key={title}
-                className="rounded-2xl border border-background/15 p-6"
+                className="rounded-2xl border border-ink/20 p-6"
               >
                 <h3 className="font-serif text-xl mb-2">{title}</h3>
-                <p className="text-sm font-light text-background/65 leading-relaxed">
+                <p className="text-sm font-light text-ink/70 leading-relaxed">
                   {copy}
                 </p>
               </li>
@@ -192,7 +192,7 @@ export default function HomePage() {
       <section className="max-w-6xl mx-auto px-6 py-24">
         <div className="flex items-end justify-between flex-wrap gap-6 mb-12">
           <div>
-            <span className="inline-block text-[11px] tracking-luxe uppercase text-primary mb-4">
+            <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-4">
               Product Houses
             </span>
             <h2 className="font-serif text-4xl sm:text-5xl font-medium">
@@ -201,7 +201,7 @@ export default function HomePage() {
           </div>
           <Link
             href="/product-houses"
-            className="text-sm tracking-wide border-b border-foreground/40 pb-1 hover:text-primary hover:border-primary transition-colors"
+            className="text-sm tracking-wide border-b border-foreground/40 pb-1 hover:text-accent hover:border-accent transition-colors"
           >
             See all houses
           </Link>

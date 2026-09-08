@@ -83,7 +83,7 @@ export default function AboutPage() {
 
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-24 grid lg:grid-cols-2 gap-14 items-center">
         <div>
-          <span className="inline-block text-[11px] tracking-luxe uppercase text-primary mb-5">
+          <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-5">
             The Practitioner
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6">
@@ -108,22 +108,22 @@ export default function AboutPage() {
       <section className="max-w-6xl mx-auto px-6 pb-20">
         <div className="bg-surface rounded-3xl p-9 sm:p-12 grid sm:grid-cols-3 gap-8 text-sm font-light">
           <div>
-            <div className="text-[10px] tracking-luxe uppercase text-primary mb-2">
+            <div className="text-[10px] tracking-luxe uppercase text-accent mb-2">
               Visit
             </div>
             {studio.address}
           </div>
           <div>
-            <div className="text-[10px] tracking-luxe uppercase text-primary mb-2">
+            <div className="text-[10px] tracking-luxe uppercase text-accent mb-2">
               Hours
             </div>
             {studio.hours}
           </div>
           <div>
-            <div className="text-[10px] tracking-luxe uppercase text-primary mb-2">
+            <div className="text-[10px] tracking-luxe uppercase text-accent mb-2">
               Call
             </div>
-            <a href={studio.phoneHref} className="hover:text-primary transition-colors">
+            <a href={studio.phoneHref} className="hover:text-accent transition-colors">
               {studio.phone}
             </a>
           </div>

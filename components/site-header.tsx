@@ -18,7 +18,7 @@ export function SiteHeader() {
 
   return (
     <>
-      <div className="bg-ink text-background text-center py-2.5 text-[11px] tracking-luxe uppercase">
+      <div className="bg-primary text-primary-foreground text-center py-2.5 text-[11px] tracking-luxe uppercase">
         Complimentary skin consultation for every new guest
       </div>
 
@@ -29,7 +29,7 @@ export function SiteHeader() {
             className="font-serif text-2xl tracking-wide font-medium"
             onClick={() => setOpen(false)}
           >
-            Skin Studio<span className="text-primary">.</span>
+            Skin Studio<span className="text-accent">.</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-9 text-sm tracking-wide font-light">
@@ -37,8 +37,8 @@ export function SiteHeader() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`transition-colors hover:text-primary ${
-                  pathname === link.href ? 'text-primary' : ''
+                className={`transition-colors hover:text-accent ${
+                  pathname === link.href ? 'text-accent' : ''
                 }`}
               >
                 {link.label}
@@ -46,7 +46,7 @@ export function SiteHeader() {
             ))}
             <Link
               href="/contact"
-              className="bg-ink text-background px-6 py-2.5 rounded-full text-xs tracking-luxe uppercase transition-all hover:-translate-y-0.5 hover:shadow-lg"
+              className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-xs tracking-luxe uppercase transition-all hover:-translate-y-0.5 hover:shadow-lg"
             >
               Enquire
             </Link>
@@ -70,8 +70,8 @@ export function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className={`transition-colors hover:text-primary ${
-                  pathname === link.href ? 'text-primary' : ''
+                className={`transition-colors hover:text-accent ${
+                  pathname === link.href ? 'text-accent' : ''
                 }`}
               >
                 {link.label}
@@ -80,7 +80,7 @@ export function SiteHeader() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="bg-ink text-background px-6 py-3 rounded-full text-xs tracking-luxe uppercase text-center mt-1"
+              className="bg-primary text-primary-foreground px-6 py-3 rounded-full text-xs tracking-luxe uppercase text-center mt-1"
             >
               Enquire
             </Link>

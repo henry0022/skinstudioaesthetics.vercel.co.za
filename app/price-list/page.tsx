@@ -30,7 +30,7 @@ export default function PriceListPage() {
               </span>
             </div>
             {group.note ? (
-              <p className="text-sm font-light text-primary mb-6">{group.note}</p>
+              <p className="text-sm font-light text-accent mb-6">{group.note}</p>
             ) : (
               <div className="mb-6" />
             )}
