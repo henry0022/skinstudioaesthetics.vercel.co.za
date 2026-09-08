@@ -2,10 +2,12 @@
 
 export const studio = {
   name: 'Skin Studio Aesthetics',
-  phone: '+27 21 000 0000',
-  phoneHref: 'tel:+27210000000',
+  whatsapp: '084 627 0126',
+  whatsappHref: 'https://wa.me/27846270126',
+  phone: '021 300 5162',
+  phoneHref: 'tel:+27213005162',
   email: 'hello@skinstudioaesthetics.co.za',
-  address: '14 Kloof Street, Cape Town',
+  address: '51 Chantecler Ave, Eversdal, Cape Town, 7550',
   hours: 'Tue–Sat · 9am–6pm',
   instagram: 'https://instagram.com',
 }

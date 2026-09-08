@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { CtaBand } from '@/components/cta-band'
-import { productHouses, treatments } from '@/lib/content'
+import { productHouses, studio, treatments } from '@/lib/content'
 
 const featured = treatments.slice(0, 3)
 
@@ -30,6 +30,14 @@ export default function HomePage() {
               >
                 Book a Treatment
               </Link>
+              <a
+                href={studio.whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center border border-foreground/20 bg-surface px-8 py-4 rounded-full text-xs tracking-luxe uppercase text-foreground transition-all hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+              >
+                WhatsApp
+              </a>
               <Link
                 href="/treatments"
                 className="text-sm tracking-wide border-b border-foreground/40 pb-1 hover:text-accent hover:border-accent transition-colors"
@@ -57,7 +65,7 @@ export default function HomePage() {
           <div className="relative animate-fade-up">
             <div className="relative w-full h-[440px] sm:h-[520px] rounded-[2rem] overflow-hidden shadow-[0_30px_60px_-30px_rgba(20,58,66,0.4)]">
               <Image
-                src="/images/hero.png"
+                src="/images/hero-main.png"
                 alt="A guest receiving a facial treatment at Skin Studio Aesthetics"
                 fill
                 priority

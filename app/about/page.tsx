@@ -106,7 +106,7 @@ export default function AboutPage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-6 pb-20">
-        <div className="bg-surface rounded-3xl p-9 sm:p-12 grid sm:grid-cols-3 gap-8 text-sm font-light">
+        <div className="bg-surface rounded-3xl p-9 sm:p-12 grid sm:grid-cols-4 gap-8 text-sm font-light">
           <div>
             <div className="text-[10px] tracking-luxe uppercase text-accent mb-2">
               Visit
@@ -118,6 +118,14 @@ export default function AboutPage() {
               Hours
             </div>
             {studio.hours}
+          </div>
+          <div>
+            <div className="text-[10px] tracking-luxe uppercase text-accent mb-2">
+              WhatsApp
+            </div>
+            <a href={studio.whatsappHref} target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">
+              {studio.whatsapp}
+            </a>
           </div>
           <div>
             <div className="text-[10px] tracking-luxe uppercase text-accent mb-2">

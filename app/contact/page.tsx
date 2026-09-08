@@ -32,7 +32,31 @@ export default function ContactPage() {
               availability, a call is fastest.
             </p>
 
+            <a
+              href={studio.whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded-full text-[11px] tracking-luxe uppercase mb-8 transition-all hover:-translate-y-0.5 hover:shadow-lg"
+            >
+              WhatsApp now
+            </a>
+
             <dl className="space-y-5 text-sm">
+              <div className="flex items-center gap-4">
+                <dt className="text-[10px] tracking-luxe uppercase text-accent w-16 shrink-0">
+                  WhatsApp
+                </dt>
+                <dd>
+                  <a
+                    href={studio.whatsappHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    {studio.whatsapp}
+                  </a>
+                </dd>
+              </div>
               <div className="flex items-center gap-4">
                 <dt className="text-[10px] tracking-luxe uppercase text-accent w-16 shrink-0">
                   Call
