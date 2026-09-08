@@ -1,67 +1,297 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-[#F2ECE1]">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | Skincare Specialist</title>
-    <!-- Tailwind CSS CDN for instant, beautiful styling without setup -->
-    <script src="https://tailwindcss.com"></script>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <!-- Using Playfair Display for a premium, high-end skincare aesthetic -->
-    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Atelier Peau — Skin Studio | Cubist Skincare, Reimagined</title>
+    <meta name="description" content="Atelier Peau is a Picasso-inspired skin studio. Fragmented beauty, whole results. Facials, peels, and bespoke skin rituals crafted like modern art.">
+    <meta name="theme-color" content="#2148C0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+        :root {
+            --canvas: #F2ECE1;
+            --ink: #1A1714;
+            --cobalt: #2148C0;
+            --terracotta: #D0472B;
+            --ochre: #E8A62C;
         }
-        .serif-font {
-            font-family: 'Playfair Display', serif;
+        body { font-family: 'Space Grotesk', sans-serif; background-color: var(--canvas); color: var(--ink); }
+        .display { font-family: 'Anton', sans-serif; letter-spacing: 0.01em; }
+        .serif { font-family: 'Fraunces', serif; }
+        .edge { border: 2.5px solid var(--ink); }
+        .shadow-block { box-shadow: 8px 8px 0 var(--ink); }
+        .shadow-block-cobalt { box-shadow: 8px 8px 0 var(--cobalt); }
+        .grain::before {
+            content: ""; position: absolute; inset: 0; pointer-events: none;
+            background-image: radial-gradient(var(--ink) 0.5px, transparent 0.5px);
+            background-size: 7px 7px; opacity: 0.05;
+        }
+        @keyframes drift { 0%,100% { transform: translateY(0) rotate(var(--r,0deg)); } 50% { transform: translateY(-10px) rotate(var(--r,0deg)); } }
+        .drift { animation: drift 6s ease-in-out infinite; }
+        .ph { /* image placeholder */
+            display:flex; align-items:center; justify-content:center; text-align:center;
+            font-family:'Space Grotesk',sans-serif; font-size:0.7rem; letter-spacing:0.2em;
+            text-transform:uppercase; color: var(--ink);
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 14px, rgba(26,23,20,0.07) 14px, rgba(26,23,20,0.07) 15px);
         }
     </style>
 </head>
-<body class="bg-[#FAF8F5] text-[#332A24] min-h-screen flex flex-col justify-between antialiased selection:bg-[#E6DFD3]">
+<body class="antialiased overflow-x-hidden selection:bg-[#E8A62C]">
 
-    <!-- Top Accent Bar -->
-    <div class="h-1.5 w-full bg-[#D1C2B0]"></div>
+    <!-- Top marquee bar -->
+    <div class="bg-[#1A1714] text-[#F2ECE1] py-2 overflow-hidden">
+        <div class="display text-sm whitespace-nowrap tracking-[0.3em] flex gap-8 animate-[drift_0s]">
+            <span>ATELIER PEAU &nbsp;•&nbsp; FRAGMENTED BEAUTY, WHOLE RESULTS &nbsp;•&nbsp; NOW BOOKING SPRING RITUALS &nbsp;•&nbsp; ATELIER PEAU &nbsp;•&nbsp; SKIN AS MODERN ART &nbsp;•&nbsp; ATELIER PEAU</span>
+        </div>
+    </div>
 
-    <!-- Main Content Container -->
-    <main class="flex-grow flex flex-col items-center justify-center px-6 py-12 max-w-2xl mx-auto text-center">
-        
-        <!-- Subtle Premium Badge -->
-        <span class="text-xs uppercase tracking-[0.25em] text-[#8C7A6B] font-medium mb-6 block animate-pulse">
-            Elevating Your Natural Radiance
-        </span>
-
-        <!-- Main Heading -->
-        <h1 class="serif-font text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight text-[#261E1A] mb-6">
-            Something Beautiful <br>
-            <span class="italic font-light text-[#8C7A6B]">is coming soon</span>
-        </h1>
-
-        <!-- Divider Line -->
-        <div class="w-12 h-[1px] bg-[#D1C2B0] my-6"></div>
-
-        <!-- Description -->
-        <p class="text-base sm:text-lg text-[#5E5146] font-light leading-relaxed max-w-md mb-10">
-            We are curating a bespoke digital space dedicated to advanced skin health, premium treatments, and curated professional product selections.
-        </p>
-
-        <!-- Dynamic Indicator for Client -->
-        <div class="inline-flex items-center gap-3 bg-white px-5 py-3 rounded-full shadow-sm border border-[#E6DFD3] text-sm text-[#5E5146]">
-            <span class="flex h-2 w-2 relative">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A3C4BC] opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-[#7BA098]"></span>
+    <!-- Nav -->
+    <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+            <span class="w-9 h-9 bg-[#2148C0] edge rotate-12 flex items-center justify-center">
+                <span class="display text-[#F2ECE1] text-lg -rotate-12">P</span>
             </span>
-            Site design & development underway
+            <span class="display text-2xl tracking-tight">ATELIER&nbsp;PEAU</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a href="#treatments" class="hover:text-[#D0472B] transition-colors">Treatments</a>
+            <a href="#studio" class="hover:text-[#D0472B] transition-colors">The Studio</a>
+            <a href="#gallery" class="hover:text-[#D0472B] transition-colors">Gallery</a>
+            <a href="#book" class="edge bg-[#E8A62C] px-4 py-2 shadow-block hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all">Book a Ritual</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <main>
+    <section class="relative grain max-w-6xl mx-auto px-6 pt-8 pb-20">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <!-- Headline -->
+            <div class="lg:col-span-7 relative z-10">
+                <span class="inline-block edge bg-[#F2ECE1] px-3 py-1 text-xs uppercase tracking-[0.25em] mb-6 -rotate-2">Est. 2026 · A Cubist Skin Studio</span>
+                <h1 class="display text-6xl sm:text-7xl lg:text-8xl leading-[0.86] uppercase">
+                    <span class="block">See your</span>
+                    <span class="block text-[#2148C0]">skin from</span>
+                    <span class="block">
+                        <span class="text-[#D0472B]">every</span>
+                        <span class="serif italic lowercase font-light normal-case tracking-tight">angle</span>
+                    </span>
+                </h1>
+                <p class="serif text-xl leading-relaxed max-w-md mt-8 text-[#1A1714]/80">
+                    We break beauty into its parts — texture, tone, light, line — then put you back together, more radiant than before.
+                </p>
+                <div class="flex flex-wrap gap-4 mt-9">
+                    <a href="#book" class="display uppercase text-lg tracking-wide edge bg-[#2148C0] text-[#F2ECE1] px-7 py-3 shadow-block hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">Book a Ritual</a>
+                    <a href="#treatments" class="display uppercase text-lg tracking-wide edge bg-transparent px-7 py-3 hover:bg-[#1A1714] hover:text-[#F2ECE1] transition-colors">View Treatments</a>
+                </div>
+            </div>
+
+            <!-- Cubist portrait collage -->
+            <div class="lg:col-span-5 relative h-[420px] sm:h-[500px]">
+                <!-- main portrait placeholder -->
+                <div class="ph edge shadow-block-cobalt absolute top-4 right-6 w-52 h-72 bg-[#F2ECE1] rotate-3" style="--r:3deg">
+                    Portrait Placeholder
+                </div>
+                <!-- offset color panel -->
+                <div class="ph edge absolute top-24 left-2 w-40 h-52 bg-[#E8A62C] -rotate-6 drift" style="--r:-6deg">
+                    Detail Placeholder
+                </div>
+                <!-- small square -->
+                <div class="ph edge absolute bottom-2 right-24 w-32 h-32 bg-[#D0472B] text-[#F2ECE1] rotate-6 shadow-block" style="--r:6deg">
+                    Texture
+                </div>
+                <!-- floating geometric accents (aesthetic, not filler) -->
+                <div class="absolute -top-2 left-24 w-10 h-10 bg-[#2148C0] edge rounded-full drift" style="--r:0deg"></div>
+                <div class="absolute bottom-16 left-0 w-0 h-0 border-l-[22px] border-l-transparent border-r-[22px] border-r-transparent border-b-[38px] border-b-[#1A1714]"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ticker strip -->
+    <section class="bg-[#2148C0] text-[#F2ECE1] edge border-x-0 py-4">
+        <div class="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-between gap-y-3 gap-x-8 display uppercase text-sm sm:text-base tracking-wide">
+            <span>Signature Facials</span>
+            <span class="text-[#E8A62C]">✦</span>
+            <span>Chemical Peels</span>
+            <span class="text-[#E8A62C]">✦</span>
+            <span>Micro-needling</span>
+            <span class="text-[#E8A62C]">✦</span>
+            <span>LED Light Therapy</span>
+            <span class="text-[#E8A62C]">✦</span>
+            <span>Bespoke Rituals</span>
+        </div>
+    </section>
+
+    <!-- Treatments -->
+    <section id="treatments" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="flex items-end justify-between flex-wrap gap-4 mb-12">
+            <h2 class="display text-5xl sm:text-6xl uppercase leading-none">The<br><span class="text-[#D0472B]">Treatments</span></h2>
+            <p class="serif italic text-lg max-w-sm text-[#1A1714]/70">Each session composed like a canvas — layered, deliberate, unmistakably yours.</p>
         </div>
 
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <article class="edge bg-[#F2ECE1] shadow-block flex flex-col">
+                <div class="ph h-44 bg-[#E8A62C] border-b-[2.5px] border-[#1A1714]">Treatment Image</div>
+                <div class="p-6 flex flex-col grow">
+                    <span class="display text-[#2148C0] text-sm tracking-widest mb-2">01</span>
+                    <h3 class="display text-2xl uppercase mb-2">Deconstructed Facial</h3>
+                    <p class="text-sm leading-relaxed text-[#1A1714]/70 grow">A full-face reset broken into cleanse, resurface, and restore. Ninety minutes of methodical glow.</p>
+                    <div class="flex items-center justify-between mt-5 pt-4 border-t-2 border-dashed border-[#1A1714]/30">
+                        <span class="serif italic text-lg">from R950</span>
+                        <span class="display text-sm uppercase text-[#D0472B]">90 min</span>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 2 -->
+            <article class="edge bg-[#F2ECE1] shadow-block flex flex-col md:mt-8">
+                <div class="ph h-44 bg-[#2148C0] text-[#F2ECE1] border-b-[2.5px] border-[#1A1714]">Treatment Image</div>
+                <div class="p-6 flex flex-col grow">
+                    <span class="display text-[#2148C0] text-sm tracking-widest mb-2">02</span>
+                    <h3 class="display text-2xl uppercase mb-2">Blue Period Peel</h3>
+                    <p class="text-sm leading-relaxed text-[#1A1714]/70 grow">A cooling acid resurfacing that lifts dullness and reveals a clearer, more even complexion.</p>
+                    <div class="flex items-center justify-between mt-5 pt-4 border-t-2 border-dashed border-[#1A1714]/30">
+                        <span class="serif italic text-lg">from R1250</span>
+                        <span class="display text-sm uppercase text-[#D0472B]">60 min</span>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 3 -->
+            <article class="edge bg-[#F2ECE1] shadow-block flex flex-col">
+                <div class="ph h-44 bg-[#D0472B] text-[#F2ECE1] border-b-[2.5px] border-[#1A1714]">Treatment Image</div>
+                <div class="p-6 flex flex-col grow">
+                    <span class="display text-[#2148C0] text-sm tracking-widest mb-2">03</span>
+                    <h3 class="display text-2xl uppercase mb-2">Golden Line Micro</h3>
+                    <p class="text-sm leading-relaxed text-[#1A1714]/70 grow">Precision micro-needling that redraws texture and firmness, one fine line at a time.</p>
+                    <div class="flex items-center justify-between mt-5 pt-4 border-t-2 border-dashed border-[#1A1714]/30">
+                        <span class="serif italic text-lg">from R1600</span>
+                        <span class="display text-sm uppercase text-[#D0472B]">75 min</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Studio / About -->
+    <section id="studio" class="bg-[#1A1714] text-[#F2ECE1] py-20">
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="relative h-[420px]">
+                <div class="ph edge border-[#F2ECE1] absolute inset-0 w-4/5 h-full bg-[#1A1714] text-[#F2ECE1]" style="border-color:#F2ECE1">Studio Interior Placeholder</div>
+                <div class="ph edge border-[#F2ECE1] absolute bottom-0 right-0 w-2/5 h-52 bg-[#E8A62C] text-[#1A1714] shadow-block" style="border-color:#F2ECE1; box-shadow:8px 8px 0 #2148C0">Founder Placeholder</div>
+            </div>
+            <div>
+                <span class="inline-block edge border-[#F2ECE1] px-3 py-1 text-xs uppercase tracking-[0.25em] mb-6">The Studio</span>
+                <h2 class="display text-5xl sm:text-6xl uppercase leading-[0.9] mb-6">A studio<br><span class="text-[#E8A62C]">that paints</span><br>with skin</h2>
+                <p class="serif text-lg leading-relaxed text-[#F2ECE1]/80 mb-5">
+                    We treat the face the way a cubist treats a canvas — studying every plane and shadow, then reassembling it into something bolder and more alive.
+                </p>
+                <p class="text-sm leading-relaxed text-[#F2ECE1]/60 mb-8">
+                    Clinical-grade care meets an artist's eye. No two rituals are identical, because no two faces are.
+                </p>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="edge border-[#F2ECE1] p-4"><div class="display text-3xl text-[#E8A62C]">12+</div><div class="text-xs uppercase tracking-wider mt-1">Years' craft</div></div>
+                    <div class="edge border-[#F2ECE1] p-4"><div class="display text-3xl text-[#D0472B]">40</div><div class="text-xs uppercase tracking-wider mt-1">Ritual blends</div></div>
+                    <div class="edge border-[#F2ECE1] p-4"><div class="display text-3xl text-[#2148C0]" style="color:#7B9CF5">∞</div><div class="text-xs uppercase tracking-wider mt-1">Angles seen</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="flex items-end justify-between flex-wrap gap-4 mb-12">
+            <h2 class="display text-5xl sm:text-6xl uppercase leading-none">The<br><span class="text-[#2148C0]">Gallery</span></h2>
+            <p class="serif italic text-lg max-w-sm text-[#1A1714]/70">Fragments of the work — before, after, and the art in between.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="ph edge shadow-block h-56 bg-[#E8A62C] rotate-1" style="--r:1deg">Gallery 01</div>
+            <div class="ph edge shadow-block h-56 bg-[#2148C0] text-[#F2ECE1] -rotate-1 md:mt-6">Gallery 02</div>
+            <div class="ph edge shadow-block h-56 bg-[#D0472B] text-[#F2ECE1] rotate-1">Gallery 03</div>
+            <div class="ph edge shadow-block h-56 bg-[#F2ECE1] -rotate-1 md:mt-6">Gallery 04</div>
+            <div class="ph edge shadow-block h-56 bg-[#F2ECE1] -rotate-1 md:-mt-4">Gallery 05</div>
+            <div class="ph edge shadow-block h-56 bg-[#D0472B] text-[#F2ECE1] rotate-1">Gallery 06</div>
+            <div class="ph edge shadow-block h-56 bg-[#E8A62C] -rotate-1 md:mt-6">Gallery 07</div>
+            <div class="ph edge shadow-block h-56 bg-[#2148C0] text-[#F2ECE1] rotate-1">Gallery 08</div>
+        </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section id="book" class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="edge bg-[#D0472B] text-[#F2ECE1] shadow-block relative overflow-hidden">
+            <div class="grain"></div>
+            <div class="relative grid lg:grid-cols-2 gap-8 p-8 sm:p-12 items-center">
+                <div>
+                    <h2 class="display text-5xl sm:text-6xl uppercase leading-[0.9]">Ready for<br>your sitting?</h2>
+                    <p class="serif text-lg leading-relaxed mt-5 text-[#F2ECE1]/85 max-w-md">Reserve a consultation and we'll compose a ritual around your skin. First-time guests receive a complimentary skin reading.</p>
+                    <div class="flex flex-wrap gap-6 mt-8 text-sm">
+                        <div><div class="display text-xs tracking-widest text-[#E8A62C]">CALL</div><div class="mt-1">+27 21 000 0000</div></div>
+                        <div><div class="display text-xs tracking-widest text-[#E8A62C]">VISIT</div><div class="mt-1">14 Kloof Street, Cape Town</div></div>
+                        <div><div class="display text-xs tracking-widest text-[#E8A62C]">HOURS</div><div class="mt-1">Tue–Sat · 9–6</div></div>
+                    </div>
+                </div>
+                <form class="edge border-[#F2ECE1] bg-[#F2ECE1] text-[#1A1714] p-6 space-y-4" onsubmit="event.preventDefault(); this.reset(); alert('Thank you — we will be in touch to confirm your ritual.');">
+                    <div>
+                        <label for="name" class="display text-xs uppercase tracking-widest">Name</label>
+                        <input id="name" type="text" required class="w-full edge bg-transparent px-3 py-2 mt-1 focus:outline-none focus:bg-[#E8A62C]/20" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label for="email" class="display text-xs uppercase tracking-widest">Email</label>
+                        <input id="email" type="email" required class="w-full edge bg-transparent px-3 py-2 mt-1 focus:outline-none focus:bg-[#E8A62C]/20" placeholder="you@email.com">
+                    </div>
+                    <div>
+                        <label for="ritual" class="display text-xs uppercase tracking-widest">Ritual of interest</label>
+                        <select id="ritual" class="w-full edge bg-transparent px-3 py-2 mt-1 focus:outline-none focus:bg-[#E8A62C]/20">
+                            <option>Deconstructed Facial</option>
+                            <option>Blue Period Peel</option>
+                            <option>Golden Line Micro</option>
+                            <option>Not sure — advise me</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full display uppercase text-lg tracking-wide edge bg-[#2148C0] text-[#F2ECE1] py-3 hover:bg-[#1A1714] transition-colors">Request Booking</button>
+                </form>
+            </div>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer Space -->
-    <footer class="w-full text-center py-8 border-t border-[#E6DFD3] px-6">
-        <p class="text-xs tracking-wider text-[#A19488]">
-            &copy; 2026 Bespoke Skin Health. All rights reserved.
-        </p>
+    <!-- Footer -->
+    <footer class="bg-[#1A1714] text-[#F2ECE1]">
+        <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10">
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-9 h-9 bg-[#2148C0] edge border-[#F2ECE1] rotate-12 flex items-center justify-center">
+                        <span class="display text-[#F2ECE1] text-lg -rotate-12">P</span>
+                    </span>
+                    <span class="display text-2xl">ATELIER&nbsp;PEAU</span>
+                </div>
+                <p class="serif italic text-[#F2ECE1]/70 max-w-xs">Fragmented beauty, whole results. A cubist skin studio in Cape Town.</p>
+            </div>
+            <div>
+                <h3 class="display text-sm uppercase tracking-widest text-[#E8A62C] mb-4">Explore</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#treatments" class="hover:text-[#E8A62C] transition-colors">Treatments</a></li>
+                    <li><a href="#studio" class="hover:text-[#E8A62C] transition-colors">The Studio</a></li>
+                    <li><a href="#gallery" class="hover:text-[#E8A62C] transition-colors">Gallery</a></li>
+                    <li><a href="#book" class="hover:text-[#E8A62C] transition-colors">Book a Ritual</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="display text-sm uppercase tracking-widest text-[#E8A62C] mb-4">Follow</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-[#E8A62C] transition-colors">Instagram</a></li>
+                    <li><a href="#" class="hover:text-[#E8A62C] transition-colors">Pinterest</a></li>
+                    <li><a href="#" class="hover:text-[#E8A62C] transition-colors">Newsletter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-[#F2ECE1]/15">
+            <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col sm:flex-row justify-between gap-2 text-xs tracking-wider text-[#F2ECE1]/50">
+                <p>&copy; 2026 Atelier Peau Skin Studio. All rights reserved.</p>
+                <p>Composed like a canvas.</p>
+            </div>
+        </div>
     </footer>
 
 </body>
