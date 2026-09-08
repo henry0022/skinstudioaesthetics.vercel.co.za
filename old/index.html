@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#F0FAFA]" style="scroll-behavior:smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Studio Aesthetics | Modern Skincare, Elevated</title>
+    <meta name="description" content="Skin Studio Aesthetics is a modern skin studio offering results-driven facials, peels, and bespoke treatments in an elevated, effortless setting.">
+    <meta name="theme-color" content="#14B8A6">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #F0FAFA;   /* arctic white */
+            --sand: #D6EFEE;    /* icy tint for placeholders */
+            --espresso: #0B3B3C; /* deep teal ink */
+            --gold: #14B8A6;    /* turquoise accent */
+            --white: #FBFFFF;   /* pure arctic surface */
+        }
+        body { font-family: 'Jost', sans-serif; background-color: var(--cream); color: var(--espresso); }
+        .serif { font-family: 'Cormorant Garamond', serif; }
+        .tracking-luxe { letter-spacing: 0.32em; }
+        .btn-fill { transition: all .3s ease; }
+        .btn-fill:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -12px rgba(11,59,60,0.45); }
+        .card-hover { transition: transform .4s ease, box-shadow .4s ease; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -24px rgba(11,59,60,0.30); }
+        .ph { /* image placeholder */
+            display:flex; align-items:center; justify-content:center; text-align:center;
+            font-family:'Jost',sans-serif; font-size:0.62rem; letter-spacing:0.28em;
+            text-transform:uppercase; color: rgba(11,59,60,0.45);
+            background-color: var(--sand);
+            background-image: linear-gradient(135deg, rgba(255,255,255,0.6) 0%, rgba(20,184,166,0.16) 100%);
+        }
+        .fade-up { opacity:0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+        .fade-up.in { opacity:1; transform: none; }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-[#14B8A6] selection:text-[#FBFFFF]">
+
+    <!-- Announcement bar -->
+    <div class="bg-[#0B3B3C] text-[#F0FAFA] text-center py-2.5 text-[11px] tracking-luxe uppercase">
+        Complimentary skin consultation for every new guest
+    </div>
+
+    <!-- Nav -->
+    <header class="sticky top-0 z-50 bg-[#F0FAFA]/85 backdrop-blur-md border-b border-[#0B3B3C]/8">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="#" class="serif text-2xl tracking-wide font-medium">Skin Studio<span class="text-[#14B8A6]">.</span></a>
+            <nav class="hidden md:flex items-center gap-10 text-sm tracking-wide font-light">
+                <a href="#treatments" class="hover:text-[#14B8A6] transition-colors">Treatments</a>
+                <a href="#studio" class="hover:text-[#14B8A6] transition-colors">The Studio</a>
+                <a href="#gallery" class="hover:text-[#14B8A6] transition-colors">Gallery</a>
+                <a href="#book" class="bg-[#0B3B3C] text-[#F0FAFA] px-6 py-2.5 rounded-full btn-fill text-xs tracking-luxe uppercase">Book Now</a>
+            </nav>
+            <a href="#book" class="md:hidden bg-[#0B3B3C] text-[#F0FAFA] px-5 py-2 rounded-full text-xs tracking-widest uppercase">Book</a>
+        </div>
+    </header>
+
+    <main>
+    <!-- Hero -->
+    <section class="max-w-6xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="fade-up">
+                <span class="inline-block text-[11px] tracking-luxe uppercase text-[#14B8A6] mb-6">Cape Town · Skin Studio</span>
+                <h1 class="serif text-5xl sm:text-6xl lg:text-7xl leading-[1.02] font-medium mb-7">
+                    Skin that speaks <span class="italic text-[#14B8A6]">quietly</span>, glows loudly.
+                </h1>
+                <p class="text-base leading-relaxed text-[#0B3B3C]/70 max-w-md mb-9 font-light">
+                    Results-driven facials and bespoke rituals, delivered in a calm, considered space designed entirely around you.
+                </p>
+                <div class="flex flex-wrap items-center gap-5">
+                    <a href="#book" class="bg-[#0B3B3C] text-[#F0FAFA] px-8 py-4 rounded-full btn-fill text-xs tracking-luxe uppercase">Book a Treatment</a>
+                    <a href="#treatments" class="text-sm tracking-wide border-b border-[#0B3B3C]/40 pb-1 hover:text-[#14B8A6] hover:border-[#14B8A6] transition-colors">Explore menu</a>
+                </div>
+                <div class="flex items-center gap-8 mt-12 pt-8 border-t border-[#0B3B3C]/10">
+                    <div><div class="serif text-3xl">4.9★</div><div class="text-[11px] tracking-widest uppercase text-[#0B3B3C]/50 mt-1">600+ reviews</div></div>
+                    <div><div class="serif text-3xl">12<span class="text-[#14B8A6]">yrs</span></div><div class="text-[11px] tracking-widest uppercase text-[#0B3B3C]/50 mt-1">Of expertise</div></div>
+                    <div><div class="serif text-3xl">98<span class="text-[#14B8A6]">%</span></div><div class="text-[11px] tracking-widest uppercase text-[#0B3B3C]/50 mt-1">Rebook rate</div></div>
+                </div>
+            </div>
+
+            <!-- Hero imagery -->
+            <div class="relative fade-up">
+                <div class="ph rounded-[2rem] w-full h-[440px] sm:h-[520px] shadow-[0_30px_60px_-30px_rgba(44,37,33,0.4)]">Hero Portrait Placeholder</div>
+                <div class="ph rounded-2xl absolute -bottom-8 -left-6 w-40 h-48 border-4 border-[#F0FAFA] shadow-xl hidden sm:flex">Detail</div>
+                <div class="absolute -top-5 -right-4 bg-[#FBFFFF] rounded-2xl px-5 py-4 shadow-lg hidden sm:block">
+                    <div class="serif text-2xl leading-none">Glow</div>
+                    <div class="text-[10px] tracking-luxe uppercase text-[#14B8A6] mt-1">Signature Facial</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee values -->
+    <section class="border-y border-[#0B3B3C]/10 bg-[#FBFFFF]">
+        <div class="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-xs sm:text-sm tracking-luxe uppercase text-[#0B3B3C]/60">
+            <span>Medical-Grade</span>
+            <span class="text-[#14B8A6]">/</span>
+            <span>Cruelty-Free</span>
+            <span class="text-[#14B8A6]">/</span>
+            <span>Bespoke Rituals</span>
+            <span class="text-[#14B8A6]">/</span>
+            <span>Zero Downtime</span>
+            <span class="text-[#14B8A6]">/</span>
+            <span>Quiet Luxury</span>
+        </div>
+    </section>
+
+    <!-- Treatments -->
+    <section id="treatments" class="max-w-6xl mx-auto px-6 py-24">
+        <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
+            <span class="inline-block text-[11px] tracking-luxe uppercase text-[#14B8A6] mb-4">The Menu</span>
+            <h2 class="serif text-4xl sm:text-5xl font-medium mb-4">Treatments, thoughtfully composed</h2>
+            <p class="text-[#0B3B3C]/65 font-light leading-relaxed">Every service begins with a reading of your skin, so results feel effortless and entirely your own.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <article class="bg-[#FBFFFF] rounded-3xl overflow-hidden card-hover">
+                <div class="ph h-52">Treatment Image</div>
+                <div class="p-7">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="serif text-2xl">The Signature Glow</h3>
+                        <span class="text-[10px] tracking-widest uppercase text-[#0B3B3C]/45">90 min</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-[#0B3B3C]/65 font-light mb-6">A full reset — deep cleanse, gentle resurfacing, and a luminous finish that lasts.</p>
+                    <div class="flex items-center justify-between pt-5 border-t border-[#0B3B3C]/10">
+                        <span class="serif text-xl">from R950</span>
+                        <a href="#book" class="text-xs tracking-luxe uppercase text-[#14B8A6] hover:text-[#0B3B3C] transition-colors">Book →</a>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 2 -->
+            <article class="bg-[#FBFFFF] rounded-3xl overflow-hidden card-hover md:-mt-6">
+                <div class="ph h-52">Treatment Image</div>
+                <div class="p-7">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="serif text-2xl">Radiance Peel</h3>
+                        <span class="text-[10px] tracking-widest uppercase text-[#0B3B3C]/45">60 min</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-[#0B3B3C]/65 font-light mb-6">A refined acid resurfacing that lifts dullness and evens tone with zero downtime.</p>
+                    <div class="flex items-center justify-between pt-5 border-t border-[#0B3B3C]/10">
+                        <span class="serif text-xl">from R1250</span>
+                        <a href="#book" class="text-xs tracking-luxe uppercase text-[#14B8A6] hover:text-[#0B3B3C] transition-colors">Book →</a>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 3 -->
+            <article class="bg-[#FBFFFF] rounded-3xl overflow-hidden card-hover">
+                <div class="ph h-52">Treatment Image</div>
+                <div class="p-7">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="serif text-2xl">Sculpt & Firm Micro</h3>
+                        <span class="text-[10px] tracking-widest uppercase text-[#0B3B3C]/45">75 min</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-[#0B3B3C]/65 font-light mb-6">Precision micro-needling to smooth texture and restore a firmer, sculpted look.</p>
+                    <div class="flex items-center justify-between pt-5 border-t border-[#0B3B3C]/10">
+                        <span class="serif text-xl">from R1600</span>
+                        <a href="#book" class="text-xs tracking-luxe uppercase text-[#14B8A6] hover:text-[#0B3B3C] transition-colors">Book →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Studio / About -->
+    <section id="studio" class="bg-[#0B3B3C] text-[#F0FAFA] py-24">
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
+            <div class="relative fade-up order-2 lg:order-1">
+                <div class="ph rounded-[2rem] w-full h-[460px]" style="background-color:#0F5152; color:rgba(240,250,250,0.6); background-image:linear-gradient(135deg, rgba(240,250,250,0.06), rgba(20,184,166,0.28));">Studio Interior Placeholder</div>
+                <div class="ph rounded-2xl absolute -bottom-6 -right-4 w-44 h-52 border-4 border-[#0B3B3C] shadow-xl" style="background-color:#146364; color:rgba(240,250,250,0.6);">Founder</div>
+            </div>
+            <div class="fade-up order-1 lg:order-2">
+                <span class="inline-block text-[11px] tracking-luxe uppercase text-[#14B8A6] mb-6">The Studio</span>
+                <h2 class="serif text-4xl sm:text-5xl font-medium leading-tight mb-6">A space designed to slow the world down.</h2>
+                <p class="text-[#F0FAFA]/75 leading-relaxed font-light mb-5">
+                    Skin Studio Aesthetics pairs medical-grade expertise with the calm of a private retreat. Soft light, considered detail, and a team that listens before they touch.
+                </p>
+                <p class="text-[#F0FAFA]/55 leading-relaxed font-light text-sm mb-9">
+                    No rushed appointments, no one-size treatments — just skincare that respects your time and your skin.
+                </p>
+                <a href="#book" class="inline-block border border-[#F0FAFA]/40 text-[#F0FAFA] px-8 py-4 rounded-full text-xs tracking-luxe uppercase hover:bg-[#F0FAFA] hover:text-[#0B3B3C] transition-colors">Visit Skin Studio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="max-w-6xl mx-auto px-6 py-24">
+        <div class="flex items-end justify-between flex-wrap gap-6 mb-14 fade-up">
+            <div>
+                <span class="inline-block text-[11px] tracking-luxe uppercase text-[#14B8A6] mb-4">@skinstudioaesthetics</span>
+                <h2 class="serif text-4xl sm:text-5xl font-medium">Moments from the studio</h2>
+            </div>
+            <a href="#" class="text-sm tracking-wide border-b border-[#0B3B3C]/40 pb-1 hover:text-[#14B8A6] hover:border-[#14B8A6] transition-colors">Follow on Instagram</a>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="ph rounded-2xl h-52 card-hover">Gallery 01</div>
+            <div class="ph rounded-2xl h-52 card-hover md:mt-8">Gallery 02</div>
+            <div class="ph rounded-2xl h-52 card-hover">Gallery 03</div>
+            <div class="ph rounded-2xl h-52 card-hover md:mt-8">Gallery 04</div>
+            <div class="ph rounded-2xl h-52 card-hover md:mt-4">Gallery 05</div>
+            <div class="ph rounded-2xl h-52 card-hover">Gallery 06</div>
+            <div class="ph rounded-2xl h-52 card-hover md:mt-4">Gallery 07</div>
+            <div class="ph rounded-2xl h-52 card-hover">Gallery 08</div>
+        </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section id="book" class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="bg-[#FBFFFF] rounded-[2.5rem] shadow-[0_30px_70px_-40px_rgba(44,37,33,0.4)] overflow-hidden grid lg:grid-cols-2">
+            <div class="p-9 sm:p-12 lg:p-14">
+                <span class="inline-block text-[11px] tracking-luxe uppercase text-[#14B8A6] mb-5">Reservations</span>
+                <h2 class="serif text-4xl sm:text-5xl font-medium leading-tight mb-5">Book your glow</h2>
+                <p class="text-[#0B3B3C]/65 font-light leading-relaxed mb-9 max-w-sm">Share a few details and our team will confirm your appointment. New guests receive a complimentary skin reading.</p>
+                <div class="space-y-5 text-sm">
+                    <div class="flex items-center gap-4">
+                        <span class="text-[10px] tracking-luxe uppercase text-[#14B8A6] w-16">Call</span>
+                        <span>+27 21 000 0000</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-[10px] tracking-luxe uppercase text-[#14B8A6] w-16">Visit</span>
+                        <span>14 Kloof Street, Cape Town</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-[10px] tracking-luxe uppercase text-[#14B8A6] w-16">Hours</span>
+                        <span>Tue–Sat · 9am–6pm</span>
+                    </div>
+                </div>
+            </div>
+            <form class="bg-[#F0FAFA] p-9 sm:p-12 lg:p-14 space-y-5" onsubmit="event.preventDefault(); this.reset(); alert('Thank you — we will be in touch shortly to confirm your appointment.');">
+                <div>
+                    <label for="name" class="block text-[11px] tracking-luxe uppercase text-[#0B3B3C]/60 mb-2">Name</label>
+                    <input id="name" type="text" required class="w-full bg-transparent border-b border-[#0B3B3C]/25 py-2.5 focus:outline-none focus:border-[#14B8A6] transition-colors placeholder:text-[#0B3B3C]/30" placeholder="Your name">
+                </div>
+                <div>
+                    <label for="email" class="block text-[11px] tracking-luxe uppercase text-[#0B3B3C]/60 mb-2">Email</label>
+                    <input id="email" type="email" required class="w-full bg-transparent border-b border-[#0B3B3C]/25 py-2.5 focus:outline-none focus:border-[#14B8A6] transition-colors placeholder:text-[#0B3B3C]/30" placeholder="you@email.com">
+                </div>
+                <div>
+                    <label for="ritual" class="block text-[11px] tracking-luxe uppercase text-[#0B3B3C]/60 mb-2">Treatment</label>
+                    <select id="ritual" class="w-full bg-transparent border-b border-[#0B3B3C]/25 py-2.5 focus:outline-none focus:border-[#14B8A6] transition-colors">
+                        <option>The Signature Glow</option>
+                        <option>Radiance Peel</option>
+                        <option>Sculpt & Firm Micro</option>
+                        <option>Not sure — advise me</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-[#0B3B3C] text-[#F0FAFA] py-4 rounded-full btn-fill text-xs tracking-luxe uppercase mt-2">Request Appointment</button>
+            </form>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0B3B3C] text-[#F0FAFA]">
+        <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
+            <div>
+                <div class="serif text-2xl mb-4">Skin Studio<span class="text-[#14B8A6]">.</span></div>
+                <p class="text-[#F0FAFA]/60 font-light leading-relaxed max-w-xs text-sm">A modern skin studio in Cape Town. Results-driven care in an elevated, effortless setting.</p>
+            </div>
+            <div>
+                <h3 class="text-[11px] tracking-luxe uppercase text-[#14B8A6] mb-5">Explore</h3>
+                <ul class="space-y-3 text-sm font-light">
+                    <li><a href="#treatments" class="hover:text-[#14B8A6] transition-colors">Treatments</a></li>
+                    <li><a href="#studio" class="hover:text-[#14B8A6] transition-colors">The Studio</a></li>
+                    <li><a href="#gallery" class="hover:text-[#14B8A6] transition-colors">Gallery</a></li>
+                    <li><a href="#book" class="hover:text-[#14B8A6] transition-colors">Book Now</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-[11px] tracking-luxe uppercase text-[#14B8A6] mb-5">Follow</h3>
+                <ul class="space-y-3 text-sm font-light">
+                    <li><a href="#" class="hover:text-[#14B8A6] transition-colors">Instagram</a></li>
+                    <li><a href="#" class="hover:text-[#14B8A6] transition-colors">Pinterest</a></li>
+                    <li><a href="#" class="hover:text-[#14B8A6] transition-colors">Newsletter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-[#F0FAFA]/12">
+            <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col sm:flex-row justify-between gap-2 text-[11px] tracking-widest uppercase text-[#F0FAFA]/45">
+                <p>&copy; 2026 Skin Studio Aesthetics</p>
+                <p>Quietly luxurious skincare</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.fade-up').forEach((el) => io.observe(el));
+    </script>
+</body>
+</html>

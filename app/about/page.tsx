@@ -1,0 +1,140 @@
+import type { Metadata } from 'next'
+import { CtaBand } from '@/components/cta-band'
+import { PageIntro } from '@/components/page-intro'
+import { studio } from '@/lib/content'
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description:
+    'Meet the team behind Skin Studio Aesthetics — a modern Cape Town skin studio built on medical-grade expertise and unhurried, personal care.',
+}
+
+const values = [
+  {
+    title: 'Skin first',
+    copy: 'We read your skin at every visit and adjust — no fixed protocols, no upselling.',
+  },
+  {
+    title: 'Evidence over hype',
+    copy: 'Every product and device on our menu earns its place through results, not trends.',
+  },
+  {
+    title: 'Unhurried care',
+    copy: 'Appointments are spaced so nothing is rushed, including your questions.',
+  },
+  {
+    title: 'Honest guidance',
+    copy: 'If a treatment is not right for you, we will tell you and suggest a better route.',
+  },
+]
+
+export default function AboutPage() {
+  return (
+    <>
+      <PageIntro
+        eyebrow="About Us"
+        title="A studio built around how skin actually behaves"
+        description="Skin Studio Aesthetics pairs medical-grade expertise with the calm of a private retreat, in the heart of Cape Town."
+      />
+
+      <section className="max-w-6xl mx-auto px-6 py-20 md:py-24 grid lg:grid-cols-2 gap-14 items-start">
+        <div className="ph rounded-[2rem] w-full h-[420px]">
+          Studio Interior Placeholder
+        </div>
+        <div>
+          <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6">
+            Our story
+          </h2>
+          <p className="text-foreground/70 font-light leading-relaxed mb-5">
+            The studio began with a simple frustration: skincare that promised
+            transformation but delivered a rushed hour and a bag of products.
+            We wanted the opposite — a quiet room, a practitioner who listens,
+            and a plan that makes sense for real life.
+          </p>
+          <p className="text-foreground/70 font-light leading-relaxed mb-5">
+            Today we treat everything from stubborn congestion to sun damage
+            and early ageing, always starting with the barrier and building
+            from there. Progress is tracked, adjusted and explained.
+          </p>
+          <p className="text-foreground/55 font-light leading-relaxed text-sm">
+            Placeholder copy — replace with the studio&apos;s real history and
+            practitioner bio.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-surface border-y">
+        <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
+          <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-12 text-center">
+            What we stand for
+          </h2>
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map((value) => (
+              <li key={value.title} className="rounded-2xl border p-7">
+                <h3 className="font-serif text-2xl mb-3">{value.title}</h3>
+                <p className="text-sm font-light leading-relaxed text-foreground/65">
+                  {value.copy}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 py-20 md:py-24 grid lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <span className="inline-block text-[11px] tracking-luxe uppercase text-primary mb-5">
+            The Practitioner
+          </span>
+          <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6">
+            Led by a somatologist with 12 years behind the bed
+          </h2>
+          <p className="text-foreground/70 font-light leading-relaxed mb-5">
+            Trained in advanced aesthetics and post-procedure care, our lead
+            practitioner has worked alongside dermatologists and plastic
+            surgeons before opening the studio.
+          </p>
+          <ul className="space-y-3 text-sm font-light text-foreground/65">
+            <li>· Diploma in Somatology</li>
+            <li>· Advanced chemical peel &amp; micro-needling certification</li>
+            <li>· LED and post-procedure recovery training</li>
+          </ul>
+        </div>
+        <div className="ph rounded-[2rem] w-full h-[420px]">
+          Practitioner Portrait Placeholder
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+        <div className="bg-surface rounded-3xl p-9 sm:p-12 grid sm:grid-cols-3 gap-8 text-sm font-light">
+          <div>
+            <div className="text-[10px] tracking-luxe uppercase text-primary mb-2">
+              Visit
+            </div>
+            {studio.address}
+          </div>
+          <div>
+            <div className="text-[10px] tracking-luxe uppercase text-primary mb-2">
+              Hours
+            </div>
+            {studio.hours}
+          </div>
+          <div>
+            <div className="text-[10px] tracking-luxe uppercase text-primary mb-2">
+              Call
+            </div>
+            <a href={studio.phoneHref} className="hover:text-primary transition-colors">
+              {studio.phone}
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <CtaBand
+        eyebrow="Say hello"
+        title="Come see the space"
+        description="Book a complimentary skin reading and we will map out a plan together."
+      />
+    </>
+  )
+}
