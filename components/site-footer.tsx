@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { studio } from '@/lib/content'
 
 const explore = [
   { href: '/about', label: 'About Us' },
@@ -45,10 +46,10 @@ export function SiteFooter() {
             Visit
           </h2>
           <ul className="space-y-3 text-sm font-light text-background/75">
-            <li>14 Kloof Street, Cape Town</li>
-            <li>Tue–Sat · 9am–6pm</li>
-            <li>+27 21 000 0000</li>
-            <li>hello@skinstudioaesthetics.co.za</li>
+            <li>{studio.address}</li>
+            <li>{studio.hours}</li>
+            <li>{studio.phone}</li>
+            <li>{studio.email}</li>
           </ul>
         </div>
       </div>
