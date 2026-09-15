@@ -95,8 +95,14 @@ export default function AboutPage() {
             {practitioner.name} is a {practitioner.title} at {studio.name}.
           </p>
         </div>
-        <div className="ph rounded-[2rem] w-full h-[420px]">
-          Practitioner Portrait Placeholder
+        <div className="relative w-full h-[420px] rounded-[2rem] overflow-hidden">
+          <Image
+            src="/images/hero-main.webp"
+            alt={`${practitioner.name}, ${practitioner.title} at ${studio.name}, in the studio`}
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
         </div>
       </section>
 
