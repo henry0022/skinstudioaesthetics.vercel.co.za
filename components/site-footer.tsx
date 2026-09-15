@@ -50,7 +50,7 @@ export function SiteFooter() {
             <li>{studio.address}</li>
             <li>{studio.hours}</li>
             <li>{studio.phone}</li>
-            <li>{studio.email}</li>
+            {/* <li>{studio.email}</li> */}
           </ul>
         </div>
       </div>

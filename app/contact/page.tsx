@@ -71,7 +71,7 @@ export default function ContactPage() {
                   </a>
                 </dd>
               </div>
-              <div className="flex items-center gap-4">
+              {/* <div className="flex items-center gap-4">
                 <dt className="text-[10px] tracking-luxe uppercase text-accent w-16 shrink-0">
                   Email
                 </dt>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                     {studio.email}
                   </a>
                 </dd>
-              </div>
+              </div> */}
               <div className="flex items-center gap-4">
                 <dt className="text-[10px] tracking-luxe uppercase text-accent w-16 shrink-0">
                   Visit

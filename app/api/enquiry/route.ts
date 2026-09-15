@@ -61,16 +61,23 @@ export async function POST(request: Request) {
   const treatment = str(body.treatment, 100)
   const message = str(body.message, 2000)
 
-  if (!name || !EMAIL_RE.test(email)) {
+  if (!name || (email && !EMAIL_RE.test(email)) || (!email && !phone)) {
     return NextResponse.json(
-      { error: 'Please provide your name and a valid email address.' },
+      { error: 'Please provide your name and either a valid email address or a phone number.' },
+      { status: 400 },
+    )
+  }
+
+  if (!treatment && !message) {
+    return NextResponse.json(
+      { error: 'Please select a treatment or add a message.' },
       { status: 400 },
     )
   }
 
   const lines = [
     `Name: ${name}`,
-    `Email: ${email}`,
+    email && `Email: ${email}`,
     phone && `Phone: ${phone}`,
     `Treatment: ${treatment || 'Not sure — advise me'}`,
     '',
@@ -96,7 +103,7 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       from,
       to: [to],
-      reply_to: email,
+      ...(email && { reply_to: email }),
       subject: `New enquiry — ${name}`,
       html: `<pre style="font:14px/1.6 system-ui">${escapeHtml(lines.join('\n'))}</pre>`,
     }),

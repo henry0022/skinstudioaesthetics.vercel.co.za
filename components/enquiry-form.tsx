@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { treatments } from '@/lib/content'
 
@@ -9,14 +9,42 @@ type Status = 'idle' | 'sending' | 'sent' | 'error'
 export function EnquiryForm() {
   const [status, setStatus] = useState<Status>('idle')
   const [message, setMessage] = useState('')
+  const [validationError, setValidationError] = useState<string | null>(null)
+  const messageRef = useRef<HTMLTextAreaElement>(null)
   const searchParams = useSearchParams()
   const preselectedTreatment =
     treatments.find((t) => t.slug === searchParams.get('treatment'))?.name ?? ''
+
+  function handleTreatmentChange(event: React.ChangeEvent<HTMLSelectElement>) {
+    const treatment = event.target.value
+    const textarea = messageRef.current
+    if (treatment && textarea && !textarea.value.trim()) {
+      textarea.value = `I would like to enquire about availability for ${treatment}.`
+    }
+  }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const form = event.currentTarget
     const data = Object.fromEntries(new FormData(form).entries())
+
+    if (!String(data.name ?? '').trim()) {
+      setValidationError('Please tell us your name.')
+      return
+    }
+
+    if (!String(data.email ?? '').trim() && !String(data.phone ?? '').trim()) {
+      setValidationError('Please provide an email address or a phone number.')
+      return
+    }
+
+    const treatment = String(data.treatment ?? '').trim()
+    const messageText = String(data.message ?? '').trim()
+
+    if (!treatment && !messageText) {
+      setValidationError('Please select a treatment or add a message.')
+      return
+    }
 
     setStatus('sending')
     setMessage('')
@@ -50,7 +78,8 @@ export function EnquiryForm() {
     'block text-[11px] tracking-luxe uppercase text-foreground/60 mb-2'
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5" noValidate={false}>
+    <>
+      <form onSubmit={handleSubmit} className="space-y-5" noValidate>
       {/* Honeypot — hidden from users, catches naive bots */}
       <div className="hidden" aria-hidden="true">
         <label htmlFor="company">Company</label>
@@ -75,13 +104,12 @@ export function EnquiryForm() {
 
       <div>
         <label htmlFor="email" className={labelClass}>
-          Email
+          Email (or phone below)
         </label>
         <input
           id="email"
           name="email"
           type="email"
-          required
           maxLength={200}
           autoComplete="email"
           placeholder="you@email.com"
@@ -91,7 +119,7 @@ export function EnquiryForm() {
 
       <div>
         <label htmlFor="phone" className={labelClass}>
-          Phone (optional)
+          Phone (or email above)
         </label>
         <input
           id="phone"
@@ -108,7 +136,13 @@ export function EnquiryForm() {
         <label htmlFor="treatment" className={labelClass}>
           Treatment
         </label>
-        <select id="treatment" name="treatment" className={fieldClass} defaultValue={preselectedTreatment}>
+        <select
+          id="treatment"
+          name="treatment"
+          className={fieldClass}
+          defaultValue={preselectedTreatment}
+          onChange={handleTreatmentChange}
+        >
           <option value="">Not sure — advise me</option>
           {treatments.map((t) => (
             <option key={t.slug} value={t.name}>
@@ -125,6 +159,7 @@ export function EnquiryForm() {
         <textarea
           id="message"
           name="message"
+          ref={messageRef}
           rows={4}
           maxLength={2000}
           placeholder="Tell us a little about your skin and preferred days"
@@ -149,5 +184,35 @@ export function EnquiryForm() {
         {message}
       </p>
     </form>
+
+      {validationError ? (
+        <div
+          role="alertdialog"
+          aria-modal="true"
+          aria-labelledby="enquiry-validation-title"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/50 px-6"
+        >
+          <div className="bg-background rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl">
+            <h2
+              id="enquiry-validation-title"
+              className="font-serif text-xl font-medium mb-3"
+            >
+              Almost there
+            </h2>
+            <p className="text-sm font-light text-foreground/70 mb-6">
+              {validationError}
+            </p>
+            <button
+              type="button"
+              autoFocus
+              onClick={() => setValidationError(null)}
+              className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-full text-xs tracking-luxe uppercase transition-all hover:-translate-y-0.5 hover:shadow-lg"
+            >
+              Okay
+            </button>
+          </div>
+        </div>
+      ) : null}
+    </>
   )
 }
