@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { EnquiryForm } from '@/components/enquiry-form'
 import { PageIntro } from '@/components/page-intro'
 import { studio } from '@/lib/content'
@@ -101,7 +102,9 @@ export default function ContactPage() {
           </div>
 
           <div className="bg-background p-9 sm:p-12 lg:p-14">
-            <EnquiryForm />
+            <Suspense fallback={null}>
+              <EnquiryForm />
+            </Suspense>
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { treatments } from '@/lib/content'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
@@ -8,6 +9,9 @@ type Status = 'idle' | 'sending' | 'sent' | 'error'
 export function EnquiryForm() {
   const [status, setStatus] = useState<Status>('idle')
   const [message, setMessage] = useState('')
+  const searchParams = useSearchParams()
+  const preselectedTreatment =
+    treatments.find((t) => t.slug === searchParams.get('treatment'))?.name ?? ''
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -104,7 +108,7 @@ export function EnquiryForm() {
         <label htmlFor="treatment" className={labelClass}>
           Treatment
         </label>
-        <select id="treatment" name="treatment" className={fieldClass} defaultValue="">
+        <select id="treatment" name="treatment" className={fieldClass} defaultValue={preselectedTreatment}>
           <option value="">Not sure — advise me</option>
           {treatments.map((t) => (
             <option key={t.slug} value={t.name}>

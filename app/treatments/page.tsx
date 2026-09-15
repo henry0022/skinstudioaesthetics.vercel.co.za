@@ -60,7 +60,7 @@ export default function TreatmentsPage() {
                       {treatment.price}
                     </span>
                     <Link
-                      href="/contact"
+                      href={`/contact?treatment=${treatment.slug}`}
                       className="text-xs tracking-luxe uppercase text-accent hover:text-ink transition-colors"
                     >
                       Enquire →
