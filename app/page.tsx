@@ -59,9 +59,9 @@ export default function HomePage() {
               />
             </div>
             <div className="absolute -top-5 -right-4 bg-surface rounded-2xl px-5 py-4 shadow-lg hidden sm:block">
-              <div className="font-serif text-2xl leading-none">Glow</div>
+              <div className="font-serif text-2xl leading-none">Bianca </div>
               <div className="text-[10px] tracking-luxe uppercase text-accent mt-1">
-                Signature Facial
+                Dermal Esthetician
               </div>
             </div>
 
@@ -70,7 +70,7 @@ export default function HomePage() {
                 Discover the true artistry of beautiful,healthy skin
               </p>
               <p className="text-sm leading-relaxed text-foreground/70 font-light">
-                With over 14 years of experience as a Dermal Estetition, Bianca
+                With over 14 years of experience as a Dermal Esthetician, Bianca
                 Mc Cree has built her career around a genuine passion for
                 aesthetic skincare, skin health and helping clients feel
                 confident in their own skin.
@@ -128,43 +128,59 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {featured.map((treatment, i) => (
-            <article
-              key={treatment.slug}
-              className={`bg-surface rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-24px_rgba(20,58,66,0.3)] ${
-                i === 1 ? 'md:-mt-6' : ''
-              }`}
-            >
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="font-serif text-2xl">{treatment.name}</h3>
-                <span className="text-[10px] tracking-widest uppercase text-foreground/45">
-                  {treatment.duration}
-                </span>
-              </div>
-              <p className="text-sm leading-relaxed text-foreground/65 font-light mb-6">
-                {treatment.summary}
-              </p>
-              <div className="flex items-center justify-between pt-5 border-t">
-                <span className="font-serif text-xl">{treatment.price}</span>
-                <Link
-                  href="/contact"
-                  className="text-xs tracking-luxe uppercase text-accent hover:text-ink transition-colors"
-                >
-                  Book →
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="text-center mt-14">
+        <div className="text-center mb-14">
           <Link
             href="/treatments"
             className="text-sm tracking-wide border-b border-foreground/40 pb-1 hover:text-accent hover:border-accent transition-colors"
           >
             View all treatments
           </Link>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {featured.map((treatment, i) => {
+            const cover = treatment.images[0]
+            return (
+              <article
+                key={treatment.slug}
+                className={`bg-surface rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-24px_rgba(20,58,66,0.3)] ${
+                  i === 1 ? 'md:-mt-6' : ''
+                }`}
+              >
+                {cover ? (
+                  <div className="relative w-full aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={cover.src}
+                      alt={cover.alt}
+                      fill
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                ) : null}
+                <div className="p-7">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="font-serif text-2xl">{treatment.name}</h3>
+                    <span className="text-[10px] tracking-widest uppercase text-foreground/45">
+                      {treatment.duration}
+                    </span>
+                  </div>
+                  <p className="text-sm leading-relaxed text-foreground/65 font-light mb-6">
+                    {treatment.summary}
+                  </p>
+                  <div className="flex items-center justify-between pt-5 border-t">
+                    <span className="font-serif text-xl">{treatment.price}</span>
+                    <Link
+                      href="/contact"
+                      className="text-xs tracking-luxe uppercase text-accent hover:text-ink transition-colors"
+                    >
+                      Book →
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            )
+          })}
         </div>
       </section>
 
