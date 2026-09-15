@@ -98,7 +98,16 @@ export default function ContactPage() {
               </div>
             </dl>
 
-            <div className="ph rounded-2xl h-48 mt-10">Map Placeholder</div>
+            <div className="ph rounded-2xl h-48 mt-10 overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207.07916909188185!2d18.66037554441194!3d-33.857016834411425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5778e1b3494f%3A0x550e0d0a8c7ae591!2sEversdal%20Medical%20%26%20Dental%20Centre!5e0!3m2!1sen!2sza!4v1789463650308!5m2!1sen!2sza"
+                className="w-full h-full"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            </div>
           </div>
 
           <div className="bg-background p-9 sm:p-12 lg:p-14">
