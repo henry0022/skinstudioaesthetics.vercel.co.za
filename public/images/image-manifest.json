@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "generator": "scripts/prepare-images.mjs",
+  "settings": {
+    "format": "webp",
+    "quality": 80,
+    "autoOrient": true,
+    "withoutEnlargement": true
+  },
+  "totals": {
+    "images": 23,
+    "sourceBytes": 46723506,
+    "outputBytes": 1552558,
+    "savedBytes": 45170948,
+    "reductionPercent": 96.68
+  },
+  "images": [
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Basic Deep Cleanse Facial/873344AA-3BCC-428E-B512-E137363CCDB4.png",
+      "generatedPath": "public/images/treatments/basic-deep-cleanse-facial/deep-cleanse-facial-cleansing.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 2105156,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 77076,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Basic deep cleanse facial treatment image"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Bioneedling Spicule & Algea/306C7BB2-1F93-41A1-A10D-1B4F30583F2A.png",
+      "generatedPath": "public/images/treatments/bioneedling-spicule-algae/algae-mask-application.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 2038230,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 72614,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Bioneedling spicule and algae mask application"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Bioneedling Spicule & Algea/74BF1161-6393-471D-A3C7-E272E8B16543.png",
+      "generatedPath": "public/images/treatments/bioneedling-spicule-algae/algae-mask-close-up.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 2161455,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 101516,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Bioneedling spicule and algae treatment close-up"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Dermaplaning/8A2B610C-E75E-47DF-AB32-833877B2A721.png",
+      "generatedPath": "public/images/treatments/dermaplaning/dermaplaning-treatment.webp",
+      "source": {
+        "width": 1122,
+        "height": 1402,
+        "bytes": 2344251,
+        "orientation": 1
+      },
+      "output": {
+        "width": 960,
+        "height": 1200,
+        "bytes": 91850,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Dermaplaning treatment image"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Dermaplaning/F29F7EC5-DE17-47E4-82C2-0E5EA88F1C14.png",
+      "generatedPath": "public/images/treatments/dermaplaning/exfoliation-results.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 1800838,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 48038,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Dermaplaning exfoliation result detail"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/HIFU/958407F3-A114-41A7-9549-4EA78320C750.png",
+      "generatedPath": "public/images/treatments/hifu/hifu-facial-treatment.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 2031503,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 59506,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "HIFU facial treatment image"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/IPL Hair Removal/38AB7B0C-76F0-4216-8993-128B5D012E4F.png",
+      "generatedPath": "public/images/treatments/ipl-hair-removal/ipl-hair-removal-leg.webp",
+      "source": {
+        "width": 1024,
+        "height": 1536,
+        "bytes": 1984050,
+        "orientation": 1
+      },
+      "output": {
+        "width": 800,
+        "height": 1200,
+        "bytes": 49952,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "IPL hair removal treatment on leg"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/IPL Skin Rejuvenation/1BEF4D0F-23F6-48B5-9B40-1A37467581FE.png",
+      "generatedPath": "public/images/treatments/ipl-skin-rejuvenation/ipl-facial-treatment.webp",
+      "source": {
+        "width": 1122,
+        "height": 1402,
+        "bytes": 1912950,
+        "orientation": 1
+      },
+      "output": {
+        "width": 960,
+        "height": 1200,
+        "bytes": 46470,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "IPL skin rejuvenation facial treatment"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/IPL Skin Rejuvenation/E81AB706-74DC-47B7-B687-ED0A3615CEC1.png",
+      "generatedPath": "public/images/treatments/ipl-skin-rejuvenation/ipl-facial-close-up.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 1853287,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 41082,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "IPL skin rejuvenation treatment close-up"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/LED Light Therapy/8081B0AB-F13B-4287-9467-97EAC7279158.png",
+      "generatedPath": "public/images/treatments/led-light-therapy/led-light-therapy-side-view.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 1749868,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 50532,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "LED light therapy side view"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/LED Light Therapy/880A0B8E-8DDE-4F91-AADE-E45CC82A624A.png",
+      "generatedPath": "public/images/treatments/led-light-therapy/led-light-therapy-close-up.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 1937873,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 64384,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "LED light therapy close-up"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Mesotheraphy/8531CDF4-ADCC-4C44-B0E4-FEC787D931D6.png",
+      "generatedPath": "public/images/treatments/mesotherapy/mesotherapy-needling-close-up.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 1980012,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 60546,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Mesotherapy needling close-up"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Mesotheraphy/A19249EA-147A-473C-B6B2-3B476B9B0181.png",
+      "generatedPath": "public/images/treatments/mesotherapy/mesotherapy-serum-infusion.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 1818978,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 52572,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Mesotherapy serum infusion treatment"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Proforma Jet Plasma/370E4F13-BD34-4344-B68C-CC495F97840E.png",
+      "generatedPath": "public/images/treatments/proforma-jet-plasma/jet-plasma-facial-treatment.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 2929782,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 54710,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Proforma Jet Plasma facial treatment"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Thalgo Antiageing Peel Marin/6098F654-0D46-447D-9E70-0C56C9A835B6.png",
+      "generatedPath": "public/images/treatments/thalgo-anti-ageing-peel-marin/peel-preparation.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 1781318,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 40150,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Thalgo anti-ageing Peel Marin preparation"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Thalgo Antiageing Peel Marin/C0E89D66-3419-459C-84E4-857AE83C307A.png",
+      "generatedPath": "public/images/treatments/thalgo-anti-ageing-peel-marin/peel-application.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 1943433,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 53044,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Thalgo anti-ageing Peel Marin application"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Treatment Room/559B5544-EBB4-4515-8D8F-C015819706F9.png",
+      "generatedPath": "public/images/studio/treatment-room-overview.webp",
+      "source": {
+        "width": 941,
+        "height": 1672,
+        "bytes": 2033212,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1600,
+        "bytes": 93418,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1600
+      },
+      "intendedUse": "Studio overview suitable for full-width or hero placement"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Treatment Room/744E4EED-B5ED-4E75-8AD2-F1949CF47607.png",
+      "generatedPath": "public/images/studio/treatment-room-basin-detail.webp",
+      "source": {
+        "width": 941,
+        "height": 1672,
+        "bytes": 1591655,
+        "orientation": 1
+      },
+      "output": {
+        "width": 675,
+        "height": 1200,
+        "bytes": 39028,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Studio basin detail"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Treatment Room/7B02B0B3-78AF-497C-932D-842A9445CAF9.png",
+      "generatedPath": "public/images/studio/treatment-room-mirror-detail.webp",
+      "source": {
+        "width": 941,
+        "height": 1672,
+        "bytes": 1830752,
+        "orientation": 1
+      },
+      "output": {
+        "width": 675,
+        "height": 1200,
+        "bytes": 60570,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Studio mirror and seating detail"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Treatment Room/B281AAFE-69CC-45F6-A2FE-C58A5919BDB8.png",
+      "generatedPath": "public/images/studio/treatment-room-seating-area.webp",
+      "source": {
+        "width": 941,
+        "height": 1672,
+        "bytes": 2040650,
+        "orientation": 1
+      },
+      "output": {
+        "width": 675,
+        "height": 1200,
+        "bytes": 74568,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Studio seating area detail"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Treatment Room/BB75E499-4449-4280-A560-749F0205311C.png",
+      "generatedPath": "public/images/studio/treatment-bed-detail.webp",
+      "source": {
+        "width": 1024,
+        "height": 1536,
+        "bytes": 2824686,
+        "orientation": 1
+      },
+      "output": {
+        "width": 800,
+        "height": 1200,
+        "bytes": 128578,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Studio treatment bed detail"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Treatment Room/D653C096-9FEB-453C-AAF1-3CB7E22DC6E9.png",
+      "generatedPath": "public/images/studio/treatment-room-interior.webp",
+      "source": {
+        "width": 941,
+        "height": 1672,
+        "bytes": 2246148,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1600,
+        "bytes": 159306,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1600
+      },
+      "intendedUse": "Studio interior suitable for full-width placement"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images-20260915T064914Z-1-001/Skinstudio Aesthetics Website Images/Treatment Room/E6BB09D4-6D9B-4865-AFA8-4CC3A2FE897A.png",
+      "generatedPath": "public/images/studio/aesthetic-device-detail.webp",
+      "source": {
+        "width": 941,
+        "height": 1672,
+        "bytes": 1783419,
+        "orientation": 1
+      },
+      "output": {
+        "width": 675,
+        "height": 1200,
+        "bytes": 33048,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Studio aesthetic device detail"
+    }
+  ]
+}

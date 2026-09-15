@@ -6,7 +6,7 @@ import { productHouses } from '@/lib/content'
 export const metadata: Metadata = {
   title: 'Product Houses',
   description:
-    'The skincare brands we retail at Skin Studio Aesthetics — medical-grade, cruelty-free ranges chosen for evidence and results.',
+    'The skincare brands retailed at Skin Studio Aesthetics.',
 }
 
 export default function ProductHousesPage() {

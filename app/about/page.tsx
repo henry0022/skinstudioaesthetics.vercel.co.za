@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { CtaBand } from '@/components/cta-band'
 import { PageIntro } from '@/components/page-intro'
-import { studio } from '@/lib/content'
+import { studio, studioImages } from '@/lib/content'
 
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Meet the team behind Skin Studio Aesthetics — a modern Cape Town skin studio built on medical-grade expertise and unhurried, personal care.',
+    'About Skin Studio Aesthetics, a Cape Town skin studio.',
 }
 
 const values = [
@@ -38,27 +39,28 @@ export default function AboutPage() {
       />
 
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-24 grid lg:grid-cols-2 gap-14 items-start">
-        <div className="ph rounded-[2rem] w-full h-[420px]">
-          Studio Interior Placeholder
+        <div className="relative w-full h-[420px] rounded-[2rem] overflow-hidden">
+          <Image
+            src={studioImages.interior.src}
+            alt={studioImages.interior.alt}
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
         </div>
         <div>
           <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6">
             Our story
           </h2>
           <p className="text-foreground/70 font-light leading-relaxed mb-5">
-            The studio began with a simple frustration: skincare that promised
-            transformation but delivered a rushed hour and a bag of products.
-            We wanted the opposite — a quiet room, a practitioner who listens,
-            and a plan that makes sense for real life.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris.
           </p>
           <p className="text-foreground/70 font-light leading-relaxed mb-5">
-            Today we treat everything from stubborn congestion to sun damage
-            and early ageing, always starting with the barrier and building
-            from there. Progress is tracked, adjusted and explained.
-          </p>
-          <p className="text-foreground/55 font-light leading-relaxed text-sm">
-            Placeholder copy — replace with the studio&apos;s real history and
-            practitioner bio.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt.
           </p>
         </div>
       </section>

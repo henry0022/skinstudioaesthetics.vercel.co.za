@@ -45,30 +45,15 @@ export default function HomePage() {
                 Explore menu
               </Link>
             </div>
-
-            <dl className="flex items-center gap-8 mt-12 pt-8 border-t">
-              {[
-                { value: '4.9★', label: '600+ reviews' },
-                { value: '12yrs', label: 'Of expertise' },
-                { value: '98%', label: 'Rebook rate' },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <dt className="font-serif text-3xl">{stat.value}</dt>
-                  <dd className="text-[11px] tracking-widest uppercase text-foreground/50 mt-1">
-                    {stat.label}
-                  </dd>
-                </div>
-              ))}
-            </dl>
           </div>
 
           <div className="relative animate-fade-up">
             <div className="relative w-full h-[440px] sm:h-[520px] rounded-[2rem] overflow-hidden shadow-[0_30px_60px_-30px_rgba(20,58,66,0.4)]">
               <Image
-                src="/images/hero-main.png"
-                alt="A guest receiving a facial treatment at Skin Studio Aesthetics"
+                src="/images/hero-main.webp"
+                alt="Bianca, the practitioner at Skin Studio Aesthetics, in the studio"
                 fill
-                priority
+                preload
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
               />

@@ -6,7 +6,7 @@ import { priceList } from '@/lib/content'
 export const metadata: Metadata = {
   title: 'Price List',
   description:
-    'Treatment pricing at Skin Studio Aesthetics — facials, peels, micro-needling, finishing touches and courses.',
+    'Treatment pricing at Skin Studio Aesthetics in Cape Town.',
 }
 
 export default function PriceListPage() {
@@ -59,12 +59,9 @@ export default function PriceListPage() {
         <div className="bg-surface rounded-3xl p-8 sm:p-10">
           <h2 className="font-serif text-2xl mb-4">Good to know</h2>
           <ul className="space-y-3 text-sm font-light text-foreground/65 leading-relaxed">
-            <li>· A 50% deposit secures advanced treatment bookings.</li>
-            <li>· Please give 24 hours&apos; notice to reschedule or cancel.</li>
-            <li>· Gift vouchers are available for any value or treatment.</li>
             <li>
-              · Prices are placeholders and should be replaced with the
-              studio&apos;s current rates.
+              · Durations and prices shown as &quot;TBC&quot; are still being
+              confirmed by the studio.
             </li>
           </ul>
         </div>
