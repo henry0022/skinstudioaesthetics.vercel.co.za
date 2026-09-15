@@ -1,6 +1,7 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { treatments } from '@/lib/content'
 
@@ -15,12 +16,21 @@ export function EnquiryForm() {
   const preselectedTreatment =
     treatments.find((t) => t.slug === searchParams.get('treatment'))?.name ?? ''
 
-  function handleTreatmentChange(event: React.ChangeEvent<HTMLSelectElement>) {
-    const treatment = event.target.value
+  function fillDefaultMessage(treatment: string) {
     const textarea = messageRef.current
     if (treatment && textarea && !textarea.value.trim()) {
       textarea.value = `I would like to enquire about availability for ${treatment}.`
     }
+  }
+
+  useEffect(() => {
+    fillDefaultMessage(preselectedTreatment)
+    // Only run for the treatment resolved from the URL on mount.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [preselectedTreatment])
+
+  function handleTreatmentChange(event: React.ChangeEvent<HTMLSelectElement>) {
+    fillDefaultMessage(event.target.value)
   }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -133,9 +143,17 @@ export function EnquiryForm() {
       </div>
 
       <div>
-        <label htmlFor="treatment" className={labelClass}>
-          Treatment
-        </label>
+        <div className="flex items-baseline justify-between gap-4 mb-2">
+          <label htmlFor="treatment" className={`${labelClass} mb-0`}>
+            Treatment
+          </label>
+          <Link
+            href="/treatments"
+            className="text-[11px] tracking-luxe uppercase text-accent hover:text-ink transition-colors whitespace-nowrap"
+          >
+            View menu
+          </Link>
+        </div>
         <select
           id="treatment"
           name="treatment"
