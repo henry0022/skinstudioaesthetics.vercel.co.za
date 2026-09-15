@@ -114,6 +114,7 @@ const images = [
     source: 'Treatment Room/559B5544-EBB4-4515-8D8F-C015819706F9.png',
     output: 'studio/treatment-room-overview.webp',
     maxLongEdge: 1600,
+    quality: 100,
     use: 'Studio overview suitable for full-width or hero placement',
   },
   {
@@ -227,7 +228,7 @@ async function main() {
         fit: 'inside',
         withoutEnlargement: true,
       })
-      .webp({ quality: 80 })
+      .webp({ quality: image.quality ?? 80 })
       .toFile(outputPath)
 
     const [outputMetadata, outputStats] = await Promise.all([
@@ -260,7 +261,7 @@ async function main() {
         height: outputMetadata.height,
         bytes: outputStats.size,
         format: outputMetadata.format,
-        quality: 80,
+        quality: image.quality ?? 80,
         maxLongEdge: image.maxLongEdge,
       },
       intendedUse: image.use,
