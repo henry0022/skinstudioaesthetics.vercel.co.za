@@ -4,6 +4,7 @@ import { studio } from '@/lib/content'
 const explore = [
   { href: '/about', label: 'About Us' },
   { href: '/treatments', label: 'Skin Treatments' },
+  { href: '/studio', label: 'Studio' },
   { href: '/product-houses', label: 'Product Houses' },
   { href: '/price-list', label: 'Price List' },
   { href: '/contact', label: 'Contact Us' },
