@@ -90,12 +90,6 @@ export default function ContactPage() {
                 </dt>
                 <dd>{studio.address}</dd>
               </div>
-              <div className="flex items-center gap-4">
-                <dt className="text-[10px] tracking-luxe uppercase text-accent w-16 shrink-0">
-                  Hours
-                </dt>
-                <dd>{studio.hours}</dd>
-              </div>
             </dl>
 
             <div className="ph rounded-2xl h-48 mt-10 overflow-hidden">
@@ -108,9 +102,19 @@ export default function ContactPage() {
                 referrerPolicy="strict-origin-when-cross-origin"
               />
             </div>
+
+            <div className="flex items-center gap-4 mt-6 text-sm">
+              <div className="text-[10px] tracking-luxe uppercase text-accent w-16 shrink-0">
+                Hours
+              </div>
+              <div>{studio.hours}</div>
+            </div>
           </div>
 
           <div className="bg-background p-9 sm:p-12 lg:p-14">
+            <h2 className="font-serif text-2xl font-medium mb-6">
+              Leave us a message:
+            </h2>
             <Suspense fallback={null}>
               <EnquiryForm />
             </Suspense>
