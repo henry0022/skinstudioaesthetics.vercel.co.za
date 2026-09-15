@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { CtaBand } from '@/components/cta-band'
-import { productHouses, studio, treatments } from '@/lib/content'
+import { practitioner, productHouses, studio, treatments } from '@/lib/content'
 
 const featured = treatments.slice(0, 3)
 
@@ -51,7 +51,7 @@ export default function HomePage() {
             <div className="relative w-full h-[440px] sm:h-[520px] rounded-[2rem] overflow-hidden shadow-[0_30px_60px_-30px_rgba(20,58,66,0.4)]">
               <Image
                 src="/images/hero-main.webp"
-                alt="Bianca, the practitioner at Skin Studio Aesthetics, in the studio"
+                alt={`${practitioner.name}, the practitioner at Skin Studio Aesthetics, in the studio`}
                 fill
                 preload
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -59,9 +59,9 @@ export default function HomePage() {
               />
             </div>
             <div className="absolute -top-5 -right-4 bg-surface rounded-2xl px-5 py-4 shadow-lg hidden sm:block">
-              <div className="font-serif text-2xl leading-none">Bianca </div>
+              <div className="font-serif text-2xl leading-none">{practitioner.name}</div>
               <div className="text-[10px] tracking-luxe uppercase text-accent mt-1">
-                Dermal Esthetician
+                {practitioner.title}
               </div>
             </div>
 
@@ -70,10 +70,10 @@ export default function HomePage() {
                 Discover the true artistry of beautiful,healthy skin
               </p>
               <p className="text-sm leading-relaxed text-foreground/70 font-light">
-                With over 14 years of experience as a Dermal Esthetician, Bianca
-                Mc Cree has built her career around a genuine passion for
-                aesthetic skincare, skin health and helping clients feel
-                confident in their own skin.
+                With over 14 years of experience as a {practitioner.title},{' '}
+                {practitioner.name} has built her career around a genuine
+                passion for aesthetic skincare, skin health and helping
+                clients feel confident in their own skin.
               </p>
               <p className="text-sm leading-relaxed text-foreground/70 font-light mt-4">
                 At Skin Studio Aesthetics, every treatment is approached with

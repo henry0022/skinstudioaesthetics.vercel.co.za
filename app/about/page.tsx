@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { CtaBand } from '@/components/cta-band'
 import { PageIntro } from '@/components/page-intro'
-import { studio, studioImages } from '@/lib/content'
+import { practitioner, studio, studioImages } from '@/lib/content'
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -89,18 +89,11 @@ export default function AboutPage() {
             The Practitioner
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6">
-            Led by a somatologist with 12 years behind the bed
+            Led by {practitioner.name}
           </h2>
           <p className="text-foreground/70 font-light leading-relaxed mb-5">
-            Trained in advanced aesthetics and post-procedure care, our lead
-            practitioner has worked alongside dermatologists and plastic
-            surgeons before opening the studio.
+            {practitioner.name} is a {practitioner.title} at {studio.name}.
           </p>
-          <ul className="space-y-3 text-sm font-light text-foreground/65">
-            <li>· Diploma in Somatology</li>
-            <li>· Advanced chemical peel &amp; micro-needling certification</li>
-            <li>· LED and post-procedure recovery training</li>
-          </ul>
         </div>
         <div className="ph rounded-[2rem] w-full h-[420px]">
           Practitioner Portrait Placeholder

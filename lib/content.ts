@@ -1,3 +1,9 @@
+// Approved practitioner identity. Do not change without new sign-off.
+export const practitioner = {
+  name: 'Bianca Mc Cree',
+  title: 'Dermal Esthetician',
+}
+
 // Business contact details — confirmed and approved. Do not change without new sign-off.
 export const studio = {
   name: 'Skin Studio Aesthetics',
