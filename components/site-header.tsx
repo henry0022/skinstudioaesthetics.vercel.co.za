@@ -27,10 +27,10 @@ export function SiteHeader() {
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
           <Link
             href="/"
-            className="font-serif text-2xl tracking-wide font-medium"
+            className="font-serif text-2xl tracking-wide font-semibold"
             onClick={() => setOpen(false)}
           >
-            Skin Studio<span className="text-accent">.</span>
+            Skin Studio Aesthetics
           </Link>
 
           <nav className="hidden md:flex items-center gap-9 text-sm tracking-wide font-light">

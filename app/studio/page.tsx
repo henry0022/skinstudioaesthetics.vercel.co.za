@@ -80,7 +80,7 @@ export default function StudioPage() {
             <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-4">
               What to expect
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-medium">
+            <h2 className="font-serif text-3xl sm:text-4xl font-semibold">
               What to expect when you visit
             </h2>
           </div>

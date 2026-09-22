@@ -15,7 +15,7 @@ export function CtaBand({
         <span className="inline-block text-[11px] tracking-luxe uppercase text-ink/70 mb-5">
           {eyebrow}
         </span>
-        <h2 className="font-serif text-4xl sm:text-5xl font-medium mb-5 text-balance">
+        <h2 className="font-serif text-4xl sm:text-5xl font-semibold mb-5 text-balance">
           {title}
         </h2>
         <p className="text-ink/75 font-light leading-relaxed max-w-lg mx-auto mb-9 text-pretty">

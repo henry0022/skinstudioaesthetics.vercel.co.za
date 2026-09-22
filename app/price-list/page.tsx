@@ -23,7 +23,7 @@ export default function PriceListPage() {
         {priceList.map((group) => (
           <div key={group.title}>
             <div className="mb-6">
-              <h2 className="font-serif text-3xl sm:text-4xl font-medium">
+              <h2 className="font-serif text-3xl sm:text-4xl font-semibold">
                 {group.title}
               </h2>
             </div>

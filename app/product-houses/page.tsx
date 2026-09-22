@@ -59,7 +59,7 @@ export default function ProductHousesPage() {
 
       <section className="bg-surface border-y">
         <div className="max-w-3xl mx-auto px-6 py-16 text-center">
-          <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-5">
+          <h2 className="font-serif text-3xl sm:text-4xl font-semibold mb-5">
             Retail is by consultation
           </h2>
           <p className="text-foreground/65 font-light leading-relaxed max-w-xl mx-auto">

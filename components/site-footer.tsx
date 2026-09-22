@@ -16,7 +16,7 @@ export function SiteFooter() {
       <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
         <div>
           <div className="font-serif text-2xl mb-4">
-            Skin Studio<span className="text-primary">.</span>
+            Skin Studio Aesthetics
           </div>
           <p className="text-background/60 font-light leading-relaxed max-w-xs text-sm">
             A modern skin studio in Cape Town. Results-driven care in an
@@ -48,7 +48,9 @@ export function SiteFooter() {
           </h2>
           <ul className="space-y-3 text-sm font-light text-background/75">
             <li>{studio.address}</li>
-            <li>{studio.hours}</li>
+            {studio.hours.map((hour) => (
+              <li key={hour}>{hour}</li>
+            ))}
             <li>{studio.phone}</li>
             {/* <li>{studio.email}</li> */}
           </ul>

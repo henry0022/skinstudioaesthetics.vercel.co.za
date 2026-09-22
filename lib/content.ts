@@ -13,7 +13,7 @@ export const studio = {
   phoneHref: 'tel:+27213005162',
   email: 'hello@skinstudioaesthetics.co.za',
   address: '51 Chantecler Ave, Eversdal, Cape Town, 7550',
-  hours: 'Tue–Sat · 9am–6pm',
+  hours: ['Monday - Friday 8:30 - 16:00', 'Saturdays: 08:00 - 12:00', 'Closed on public holidays'],
   instagram: 'https://instagram.com',
 }
 

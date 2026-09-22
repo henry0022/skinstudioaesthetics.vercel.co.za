@@ -25,7 +25,7 @@ export default function ContactPage() {
             <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-5">
               Reservations
             </span>
-            <h2 className="font-serif text-4xl font-medium leading-tight mb-5">
+            <h2 className="font-serif text-4xl font-semibold leading-tight mb-5">
               Visit the studio
             </h2>
             <p className="text-foreground/65 font-light leading-relaxed mb-9 max-w-sm">
@@ -107,12 +107,16 @@ export default function ContactPage() {
               <div className="text-[10px] tracking-luxe uppercase text-accent w-16 shrink-0">
                 Hours
               </div>
-              <div>{studio.hours}</div>
+              <div className="space-y-1">
+                {studio.hours.map((hour) => (
+                  <div key={hour}>{hour}</div>
+                ))}
+              </div>
             </div>
           </div>
 
           <div className="bg-background p-9 sm:p-12 lg:p-14">
-            <h2 className="font-serif text-2xl font-medium mb-6">
+            <h2 className="font-serif text-2xl font-semibold mb-6">
               Leave us a message:
             </h2>
             <Suspense fallback={null}>

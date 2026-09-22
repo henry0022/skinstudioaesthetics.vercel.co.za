@@ -49,7 +49,7 @@ export default function AboutPage() {
           />
         </div>
         <div>
-          <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl font-semibold mb-6">
             Our story
           </h2>
           <p className="text-foreground/70 font-light leading-relaxed mb-5">
@@ -67,7 +67,7 @@ export default function AboutPage() {
 
       <section className="bg-surface border-y">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
-          <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-12 text-center">
+          <h2 className="font-serif text-3xl sm:text-4xl font-semibold mb-12 text-center">
             What we stand for
           </h2>
           <ul className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -88,7 +88,7 @@ export default function AboutPage() {
           <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-5">
             The Practitioner
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-medium mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl font-semibold mb-6">
             Led by {practitioner.name}
           </h2>
           <p className="text-foreground/70 font-light leading-relaxed mb-5">
@@ -118,7 +118,11 @@ export default function AboutPage() {
             <div className="text-[10px] tracking-luxe uppercase text-accent mb-2">
               Hours
             </div>
-            {studio.hours}
+            <div className="space-y-1">
+              {studio.hours.map((hour) => (
+                <div key={hour}>{hour}</div>
+              ))}
+            </div>
           </div>
           <div>
             <div className="text-[10px] tracking-luxe uppercase text-accent mb-2">

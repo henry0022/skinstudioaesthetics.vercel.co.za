@@ -213,7 +213,7 @@ export function EnquiryForm() {
           <div className="bg-background rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl">
             <h2
               id="enquiry-validation-title"
-              className="font-serif text-xl font-medium mb-3"
+              className="font-serif text-xl font-semibold mb-3"
             >
               Almost there
             </h2>

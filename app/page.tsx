@@ -14,7 +14,7 @@ export default function HomePage() {
             <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-6">
               Cape Town · Skin Studio
             </span>
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.02] font-medium mb-7 text-balance">
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.02] font-semibold mb-7 text-balance">
               Skin that speaks{' '}
               <span className="italic text-accent">quietly</span>, glows
               loudly.
@@ -119,7 +119,7 @@ export default function HomePage() {
           <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-4">
             The Menu
           </span>
-          <h2 className="font-serif text-4xl sm:text-5xl font-medium mb-4 text-balance">
+          <h2 className="font-serif text-4xl sm:text-5xl font-semibold mb-4 text-balance">
             Treatments, thoughtfully composed
           </h2>
           <p className="text-foreground/65 font-light leading-relaxed">
@@ -193,7 +193,7 @@ export default function HomePage() {
             <span className="inline-block text-[11px] tracking-luxe uppercase text-ink/70 mb-6">
               The Studio
             </span>
-            <h2 className="font-serif text-4xl sm:text-5xl font-medium leading-tight mb-6 text-balance">
+            <h2 className="font-serif text-4xl sm:text-5xl font-semibold leading-tight mb-6 text-balance">
               A space designed to slow the world down.
             </h2>
             <p className="text-ink/80 leading-relaxed font-light mb-5">
@@ -240,7 +240,7 @@ export default function HomePage() {
             <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-4">
               Product Houses
             </span>
-            <h2 className="font-serif text-4xl sm:text-5xl font-medium">
+            <h2 className="font-serif text-4xl sm:text-5xl font-semibold">
               The brands we retail
             </h2>
           </div>

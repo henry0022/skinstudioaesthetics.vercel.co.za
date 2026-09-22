@@ -13,7 +13,7 @@ export function PageIntro({
         <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-5">
           {eyebrow}
         </span>
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium leading-[1.05] text-balance max-w-3xl mx-auto">
+        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] text-balance max-w-3xl mx-auto">
           {title}
         </h1>
         {description ? (
