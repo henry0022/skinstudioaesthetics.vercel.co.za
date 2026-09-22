@@ -96,7 +96,7 @@ all skin types and areas of the body, Dermapen treats hard-to-reach zones like a
 and lips with precision. It offers minimal downtime, adjustable needle depths for personalized
 results, and includes a superficial chemical peel for enhanced exfoliation and glow. Safe,
 effective, and clinically proven for firmer, smoother, more youthful skin. During this treatment
-we use medical grade serums that compliment your skin type.
+we use medical grade serums that complement your skin type.
 
 ### 1 Session (Neck & Face) R1,450
 ### Decollete Microneedling R500
@@ -126,7 +126,7 @@ such as meso Therapy,micro needling and Spicules.
 
 ### R500 per session
 ### Add to any other treatment for R350.
-### It can also be done as a stand alone treatment to treat various skin conditions like acne,skin sensitivity, eczema,reactive skin,collaging and elastin.
+### It can also be done as a stand alone treatment to treat various skin conditions like acne,skin sensitivity, eczema,reactive skin,collagen and elastin.
 
 ## THALGO SOURCE MARINE MEDISPA TREATMENT
 This treatment gives tired, lipid dry skin the break it deserves.

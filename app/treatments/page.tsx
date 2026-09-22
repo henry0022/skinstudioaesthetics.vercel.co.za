@@ -24,6 +24,25 @@ export default function TreatmentsPage() {
         <div className="grid md:grid-cols-3 gap-6">
           {treatments.map((treatment, index) => {
             const cover = treatment.images[0]
+            const description = (
+              <div className="space-y-3 text-sm leading-relaxed text-foreground/50 font-light mb-6">
+                {treatment.description.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+                {treatment.description.lists?.map((list) => (
+                  <div key={list.heading}>
+                    {list.heading ? (
+                      <h4 className="text-xs text-foreground/65 mb-2">{list.heading}</h4>
+                    ) : null}
+                    <ul className="list-disc pl-5 space-y-1">
+                      {list.items.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )
             return (
               <article
                 key={treatment.slug}
@@ -55,23 +74,16 @@ export default function TreatmentsPage() {
                   <p className="text-sm leading-relaxed text-foreground/65 font-light mb-4">
                     {treatment.summary}
                   </p>
-                  <div className="space-y-3 text-sm leading-relaxed text-foreground/50 font-light mb-6">
-                    {treatment.description.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                    {treatment.description.lists?.map((list) => (
-                      <div key={list.heading}>
-                        {list.heading ? (
-                          <h4 className="text-xs text-foreground/65 mb-2">{list.heading}</h4>
-                        ) : null}
-                        <ul className="list-disc pl-5 space-y-1">
-                          {list.items.map((item) => (
-                            <li key={item}>{item}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
+                  {treatment.slug === 'bioneedling-spicule-algae' ? (
+                    <details className="mb-6 group">
+                      <summary className="cursor-pointer list-none text-xs tracking-luxe uppercase text-accent hover:text-ink transition-colors">
+                        Read treatment details
+                      </summary>
+                      <div className="pt-4">{description}</div>
+                    </details>
+                  ) : (
+                    description
+                  )}
                   <div className="space-y-2 mb-6">
                     {treatment.pricing.options.map((option) => (
                       <div key={option.label} className="flex justify-between gap-4 text-sm">

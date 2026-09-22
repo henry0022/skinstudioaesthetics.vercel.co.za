@@ -67,7 +67,7 @@ export const treatments: Treatment[] = [
     slug: 'bioneedling-spicule-algae',
     name: 'Bio-Needling Spicule & Algae',
     category: 'Peels',
-    summary: 'A natural algae peel for acne, scarring, inflammation, hyperpigmentation and fine lines.',
+    summary: 'A natural algae peel for acne, scarring, inflammation, pigmentation and fine lines.',
     description: {
       paragraphs: [
         'The spicules in the algae peel contain a host of minerals including zinc and copper both of which are beneficial for those with acne, or those looking for an effective anti-ageing treatment. This is a unique peel that reduces fine lines and scarring, heals acne and inflammation and targets hyperpigmentation. This peel is 100% natural and safe for all skin tones.',
@@ -217,7 +217,7 @@ export const treatments: Treatment[] = [
     description: {
       paragraphs: [
         'LED light therapy can be used after any treatment. This will calm down the skin after treatments such as meso Therapy,micro needling and Spicules.',
-        'It can also be done as a stand alone treatment to treat various skin conditions like acne,skin sensitivity, eczema,reactive skin,collaging and elastin.',
+        'It can also be done as a stand alone treatment to treat various skin conditions like acne,skin sensitivity, eczema,reactive skin,collagen and elastin.',
       ],
     },
     pricing: {
@@ -247,7 +247,7 @@ export const treatments: Treatment[] = [
     description: {
       paragraphs: [
         'Transform the structure of your skin with the Hydrapen MesoSkin device. A special cocktail blend of Peptides,Meso fillers,growth factors and pigment inhibitors can be mixed together,to transform any skin type needing improvement in texture,fine lines and wrinkles,lacks volume,needs plumping and an overall glowing skin! Stimulate deep collagen with this treatment customised to your unique needs.',
-        'During this treatment we use medical grade serums that compliment your skin type.',
+        'During this treatment we use medical grade serums that complement your skin type.',
       ],
     },
     pricing: {
@@ -369,7 +369,7 @@ export const treatments: Treatment[] = [
     description: {
       paragraphs: [
         'DermaPen microneedling is an advanced skin rejuvenation treatment that boosts collagen and elastin production to improve fine lines, wrinkles, acne scars, stretch marks, and overall skin texture. Using tiny needles to create micro-injuries, it triggers the skin’s natural repair process, replacing damaged tissue with fresh, healthy collagen.',
-        'Suitable for all skin types and areas of the body, Dermapen treats hard-to-reach zones like around the eyes and lips with precision. It offers minimal downtime, adjustable needle depths for personalized results, and includes a superficial chemical peel for enhanced exfoliation and glow. Safe, effective, and clinically proven for firmer, smoother, more youthful skin. During this treatment we use medical grade serums that compliment your skin type.',
+        'Suitable for all skin types and areas of the body, Dermapen treats hard-to-reach zones like around the eyes and lips with precision. It offers minimal downtime, adjustable needle depths for personalized results, and includes a superficial chemical peel for enhanced exfoliation and glow. Safe, effective, and clinically proven for firmer, smoother, more youthful skin. During this treatment we use medical grade serums that complement your skin type.',
       ],
     },
     pricing: {
