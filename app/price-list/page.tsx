@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { CtaBand } from '@/components/cta-band'
 import { PageIntro } from '@/components/page-intro'
 import { priceList } from '@/lib/content'
@@ -21,13 +22,10 @@ export default function PriceListPage() {
       <section className="max-w-4xl mx-auto px-6 py-20 md:py-24 space-y-16">
         {priceList.map((group) => (
           <div key={group.title}>
-            <div className="flex items-baseline justify-between gap-6 flex-wrap mb-2">
+            <div className="mb-6">
               <h2 className="font-serif text-3xl sm:text-4xl font-medium">
                 {group.title}
               </h2>
-              <span className="text-[10px] tracking-luxe uppercase text-foreground/40">
-                Incl. VAT
-              </span>
             </div>
             {group.note ? (
               <p className="text-sm font-light text-accent mb-6">{group.note}</p>
@@ -35,24 +33,66 @@ export default function PriceListPage() {
               <div className="mb-6" />
             )}
 
-            <ul className="divide-y">
+            <div className="space-y-8">
               {group.items.map((item) => (
-                <li
-                  key={item.name}
-                  className="flex items-baseline justify-between gap-6 py-5"
-                >
-                  <div>
-                    <div className="font-light">{item.name}</div>
-                    <div className="text-[10px] tracking-widest uppercase text-foreground/45 mt-1">
-                      {item.duration}
+                <article key={item.slug} className="border-b pb-8 last:border-b-0">
+                  <div className="flex items-start justify-between gap-6 flex-wrap mb-4">
+                    <div>
+                      <div className="text-[10px] tracking-luxe uppercase text-accent mb-2">
+                        {item.category}
+                      </div>
+                      <h3 className="font-serif text-2xl sm:text-3xl leading-tight">
+                        {item.name}
+                      </h3>
                     </div>
+                    <Link
+                      href={`/contact?treatment=${item.slug}`}
+                      className="text-xs tracking-luxe uppercase text-accent hover:text-ink transition-colors whitespace-nowrap"
+                    >
+                      Enquire →
+                    </Link>
                   </div>
-                  <div className="font-serif text-xl whitespace-nowrap">
-                    {item.price}
+
+                  <div className="divide-y">
+                    {item.pricing.options.map((option) => (
+                      <div key={option.label} className="flex items-start justify-between gap-6 py-3">
+                        <span className="text-sm font-light">{option.label}</span>
+                        <span className="font-serif text-lg whitespace-nowrap">{option.price}</span>
+                      </div>
+                    ))}
+                    {item.pricing.packages?.length ? (
+                      <div className="pt-4">
+                        <h4 className="text-[10px] tracking-luxe uppercase text-foreground/45 mb-2">
+                          Packages
+                        </h4>
+                        {item.pricing.packages.map((option) => (
+                          <div key={option.label} className="flex items-start justify-between gap-6 py-2">
+                            <span className="text-sm font-light">{option.label}</span>
+                            <span className="font-serif text-lg whitespace-nowrap">{option.price}</span>
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
+                    {item.pricing.addOns?.length ? (
+                      <div className="pt-4">
+                        <h4 className="text-[10px] tracking-luxe uppercase text-foreground/45 mb-2">
+                          Add-ons
+                        </h4>
+                        {item.pricing.addOns.map((option) => (
+                          <div key={option.label} className="flex items-start justify-between gap-6 py-2">
+                            <span className="text-sm font-light">{option.label}</span>
+                            <span className="font-serif text-lg whitespace-nowrap">{option.price}</span>
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
-                </li>
+                  {item.pricing.note ? (
+                    <p className="text-sm font-light text-accent mt-4">{item.pricing.note}</p>
+                  ) : null}
+                </article>
               ))}
-            </ul>
+            </div>
           </div>
         ))}
 
@@ -60,8 +100,8 @@ export default function PriceListPage() {
           <h2 className="font-serif text-2xl mb-4">Good to know</h2>
           <ul className="space-y-3 text-sm font-light text-foreground/65 leading-relaxed">
             <li>
-              · Durations and prices shown as &quot;TBC&quot; are still being
-              confirmed by the studio.
+              · Enquire with the studio for treatment details or pricing where
+              the price list says &quot;Enquire for pricing&quot; or &quot;Price on request&quot;.
             </li>
           </ul>
         </div>

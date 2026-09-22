@@ -22,7 +22,7 @@ export default function TreatmentsPage() {
 
       <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
         <div className="grid md:grid-cols-3 gap-6">
-          {treatments.map((treatment) => {
+          {treatments.map((treatment, index) => {
             const cover = treatment.images[0]
             return (
               <article
@@ -35,37 +35,75 @@ export default function TreatmentsPage() {
                       src={cover.src}
                       alt={cover.alt}
                       fill
+                      priority={index === 0}
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover"
                     />
                   </div>
                 ) : (
-                  <div className="ph h-44">Treatment Image</div>
+                  <div className="ph w-full aspect-[3/4]">Image coming soon</div>
                 )}
                 <div className="p-7 flex flex-col flex-1">
-                  <div className="flex items-start justify-between gap-4 mb-3">
-                    <h3 className="font-serif text-2xl">{treatment.name}</h3>
-                    <span className="text-[10px] tracking-widest uppercase text-foreground/45 whitespace-nowrap mt-2">
-                      {treatment.duration}
+                  <div className="mb-3">
+                    <span className="text-[10px] tracking-luxe uppercase text-accent">
+                      {treatment.category}
                     </span>
+                    <h3 className="font-serif text-2xl leading-tight mt-2">
+                      {treatment.name}
+                    </h3>
                   </div>
                   <p className="text-sm leading-relaxed text-foreground/65 font-light mb-4">
                     {treatment.summary}
                   </p>
-                  <p className="text-sm leading-relaxed text-foreground/50 font-light mb-6">
-                    {treatment.detail}
-                  </p>
-                  <div className="flex items-center justify-between pt-5 border-t mt-auto">
-                    <span className="font-serif text-xl">
-                      {treatment.price}
+                  <div className="space-y-3 text-sm leading-relaxed text-foreground/50 font-light mb-6">
+                    {treatment.description.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                    {treatment.description.lists?.map((list) => (
+                      <div key={list.heading}>
+                        {list.heading ? (
+                          <h4 className="text-xs text-foreground/65 mb-2">{list.heading}</h4>
+                        ) : null}
+                        <ul className="list-disc pl-5 space-y-1">
+                          {list.items.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="space-y-2 mb-6">
+                    {treatment.pricing.options.map((option) => (
+                      <div key={option.label} className="flex justify-between gap-4 text-sm">
+                        <span className="text-foreground/60">{option.label}</span>
+                        <span className="font-serif whitespace-nowrap">{option.price}</span>
+                      </div>
+                    ))}
+                    {treatment.pricing.packages?.map((option) => (
+                      <div key={option.label} className="flex justify-between gap-4 text-sm">
+                        <span className="text-foreground/60">{option.label}</span>
+                        <span className="font-serif whitespace-nowrap">{option.price}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex items-center justify-between pt-5 border-t mt-auto gap-4">
+                    <span className="text-xs text-foreground/55">
+                      {treatment.pricing.options.length + (treatment.pricing.packages?.length ?? 0) > 1
+                        ? 'Multiple options'
+                        : treatment.pricing.options[0]?.price ?? 'Enquire for pricing'}
                     </span>
                     <Link
                       href={`/contact?treatment=${treatment.slug}`}
-                      className="text-xs tracking-luxe uppercase text-accent hover:text-ink transition-colors"
+                      className="text-xs tracking-luxe uppercase text-accent hover:text-ink transition-colors whitespace-nowrap"
                     >
                       Enquire →
                     </Link>
                   </div>
+                  {treatment.pricing.addOns?.length ? (
+                    <p className="text-xs text-foreground/50 mt-4">
+                      Add-ons available
+                    </p>
+                  ) : null}
                 </div>
               </article>
             )
