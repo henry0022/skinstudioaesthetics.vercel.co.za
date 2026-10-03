@@ -12,6 +12,10 @@ const sourceRoot = path.join(
 )
 const publicImagesRoot = path.join(repositoryRoot, 'public', 'images')
 const manifestPath = path.join(publicImagesRoot, 'image-manifest.json')
+const productSourceRoot = path.join(
+  repositoryRoot,
+  'Skinstudio Aesthetics Website Images - Product Images (3-10-2026)',
+)
 
 const images = [
   {
@@ -153,6 +157,20 @@ const images = [
     maxLongEdge: 1200,
     use: 'Studio aesthetic device detail',
   },
+  ...[
+    ['colorescience-range', 'Colorescience product range'],
+    ['dermafit-range', 'Dermafit product range'],
+    ['dimp-less-cellulite-management', 'Dimp-less cellulite management supplement'],
+    ['luminesce-range', 'Lamelle Luminesce product range'],
+    ['nassif-md-range', 'Nassif MD product range'],
+    ['thalgo-range', 'Thalgo product range'],
+  ].map(([filename, use]) => ({
+    sourceRoot: productSourceRoot,
+    source: `${filename}.png`,
+    output: `products/${filename}.webp`,
+    maxLongEdge: 1024,
+    use,
+  })),
 ]
 
 function toPosix(filePath) {
@@ -188,8 +206,12 @@ function orientedDimensions(metadata) {
 }
 
 async function main() {
-  const sourceFiles = await findPngFiles(sourceRoot)
-  const mappedSources = images.map(({ source }) => path.join(sourceRoot, ...source.split('/'))).sort()
+  const sourceFiles = (await Promise.all(
+    [sourceRoot, productSourceRoot].map(findPngFiles),
+  )).flat().sort()
+  const mappedSources = images.map((image) =>
+    path.join(image.sourceRoot ?? sourceRoot, ...image.source.split('/')),
+  ).sort()
 
   if (JSON.stringify(sourceFiles) !== JSON.stringify(mappedSources)) {
     throw new Error('Source inventory has changed. Update the explicit image mapping before generating assets.')
@@ -207,7 +229,7 @@ async function main() {
   const manifestImages = []
 
   for (const image of images) {
-    const sourcePath = path.join(sourceRoot, ...image.source.split('/'))
+    const sourcePath = path.join(image.sourceRoot ?? sourceRoot, ...image.source.split('/'))
     const outputPath = path.join(publicImagesRoot, ...image.output.split('/'))
     const [sourceMetadata, sourceStats] = await Promise.all([
       sharp(sourcePath).metadata(),

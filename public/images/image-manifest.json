@@ -8,11 +8,11 @@
     "withoutEnlargement": true
   },
   "totals": {
-    "images": 23,
-    "sourceBytes": 46723506,
-    "outputBytes": 1844822,
-    "savedBytes": 44878684,
-    "reductionPercent": 96.05
+    "images": 29,
+    "sourceBytes": 60934764,
+    "outputBytes": 2460596,
+    "savedBytes": 58474168,
+    "reductionPercent": 95.96
   },
   "images": [
     {
@@ -451,6 +451,120 @@
         "maxLongEdge": 1200
       },
       "intendedUse": "Studio aesthetic device detail"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images - Product Images (3-10-2026)/colorescience-range.png",
+      "generatedPath": "public/images/products/colorescience-range.webp",
+      "source": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 2270472,
+        "orientation": 1
+      },
+      "output": {
+        "width": 1024,
+        "height": 768,
+        "bytes": 118698,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1024
+      },
+      "intendedUse": "Colorescience product range"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images - Product Images (3-10-2026)/dermafit-range.png",
+      "generatedPath": "public/images/products/dermafit-range.webp",
+      "source": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 2340796,
+        "orientation": 1
+      },
+      "output": {
+        "width": 1024,
+        "height": 768,
+        "bytes": 115432,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1024
+      },
+      "intendedUse": "Dermafit product range"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images - Product Images (3-10-2026)/dimp-less-cellulite-management.png",
+      "generatedPath": "public/images/products/dimp-less-cellulite-management.webp",
+      "source": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 2131927,
+        "orientation": 1
+      },
+      "output": {
+        "width": 1024,
+        "height": 768,
+        "bytes": 93058,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1024
+      },
+      "intendedUse": "Dimp-less cellulite management supplement"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images - Product Images (3-10-2026)/luminesce-range.png",
+      "generatedPath": "public/images/products/luminesce-range.webp",
+      "source": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 2063777,
+        "orientation": 1
+      },
+      "output": {
+        "width": 1024,
+        "height": 768,
+        "bytes": 93782,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1024
+      },
+      "intendedUse": "Lamelle Luminesce product range"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images - Product Images (3-10-2026)/nassif-md-range.png",
+      "generatedPath": "public/images/products/nassif-md-range.webp",
+      "source": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 2096688,
+        "orientation": 1
+      },
+      "output": {
+        "width": 1024,
+        "height": 768,
+        "bytes": 106522,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1024
+      },
+      "intendedUse": "Nassif MD product range"
+    },
+    {
+      "sourcePath": "Skinstudio Aesthetics Website Images - Product Images (3-10-2026)/thalgo-range.png",
+      "generatedPath": "public/images/products/thalgo-range.webp",
+      "source": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 3307598,
+        "orientation": 1
+      },
+      "output": {
+        "width": 1024,
+        "height": 768,
+        "bytes": 88282,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1024
+      },
+      "intendedUse": "Thalgo product range"
     }
   ]
 }

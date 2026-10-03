@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
+  { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/treatments', label: 'Treatments' },
   { href: '/studio', label: 'Studio' },
@@ -33,7 +34,7 @@ export function SiteHeader() {
             Skin Studio Aesthetics
           </Link>
 
-          <nav className="hidden md:flex items-center gap-9 text-sm tracking-wide font-light">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-9 text-sm tracking-wide font-light">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -55,7 +56,7 @@ export function SiteHeader() {
 
           <button
             type="button"
-            className="md:hidden text-foreground"
+            className="lg:hidden text-foreground"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
@@ -65,7 +66,7 @@ export function SiteHeader() {
         </div>
 
         {open && (
-          <nav className="md:hidden border-t bg-background px-6 py-6 flex flex-col gap-5 text-sm tracking-wide">
+          <nav className="lg:hidden border-t bg-background px-6 py-6 flex flex-col gap-5 text-sm tracking-wide">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

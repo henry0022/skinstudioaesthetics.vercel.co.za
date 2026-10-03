@@ -434,54 +434,95 @@ export const studioImages: Record<string, TreatmentImage> = {
 
 export type ProductHouse = {
   name: string
-  origin: string
   focus: string
   description: string
   hero: string[]
+  image: {
+    src: string
+    alt: string
+    width: number
+    height: number
+  }
 }
 
 export const productHouses: ProductHouse[] = [
   {
-    name: 'Maison Dermé',
-    origin: 'France',
-    focus: 'Barrier repair',
-    description: '',
-    hero: ['Ceramide Balm', 'Calming Serum', 'Mineral SPF 50'],
+    name: 'Colorescience',
+    focus: 'Mineral sun care',
+    description:
+      'Everyday mineral sun protection with face shields, brush-on powders and colour balms. Explore the Sunforgettable Total Protection range as part of your daily skincare routine.',
+    hero: ['Face Shield Glow SPF 50', 'Face Shield Classic SPF 50', 'Sheer Matte Brush-On Shield SPF 30', 'Bronze Brush-On Shield SPF 50', 'Color Balm SPF 50'],
+    image: {
+      src: '/images/products/colorescience-range.webp',
+      alt: 'Colorescience Sunforgettable face shields, colour balms and brush-on mineral sunscreens',
+      width: 1024,
+      height: 768,
+    },
   },
   {
-    name: 'Nordic Lab',
-    origin: 'Denmark',
-    focus: 'Clinical actives',
-    description: '',
-    hero: ['Retinal 0.1%', 'L-Ascorbic 15%', 'PHA Resurfacing Fluid'],
+    name: 'Dermafit',
+    focus: 'Daily skin care',
+    description:
+      'A daily skincare range covering cleansing, toning and hydration. From a calming facial mist to cream and gel moisturisers, we can help you choose the essentials for your skin.',
+    hero: ['Glow-Mist', 'Derma-Oil Cleanse', 'Skin Prep', 'Soft Wash', 'Glow Matrix', 'Derma Clarity'],
+    image: {
+      src: '/images/products/dermafit-range.webp',
+      alt: 'Dermafit facial mist, cleansing oil, toner, daily cleanser and hydrating moisturisers',
+      width: 1024,
+      height: 768,
+    },
   },
   {
-    name: 'Botanica Ross',
-    origin: 'South Africa',
-    focus: 'Botanical care',
-    description: '',
-    hero: ['Rooibos Antioxidant Mist', 'Marula Oil', 'Kigelia Firming Cream'],
+    name: 'Dimp-less',
+    focus: 'Cellulite management',
+    description:
+      'An oral supplement in a 60-capsule format, offered as part of our body-care selection. Speak to us about suitability and how it may fit into your cellulite-management routine.',
+    hero: ['Cellulite Management - 60 capsules'],
+    image: {
+      src: '/images/products/dimp-less-cellulite-management.webp',
+      alt: 'Dimp-less Cellulite Management supplement bottle with capsules',
+      width: 1024,
+      height: 768,
+    },
   },
   {
-    name: 'Aster Medical',
-    origin: 'United States',
-    focus: 'Post-procedure',
-    description: '',
-    hero: ['Growth Factor Serum', 'Recovery Balm', 'Copper Peptide Mist'],
+    name: 'Lamelle Luminesce',
+    focus: 'Brightening care',
+    description:
+      'A focused brightening range from Lamelle, with cleansing, daytime care and evening skincare. Discover a coordinated routine for concerns around uneven-looking skin tone.',
+    hero: ['Brightening Cleanse', 'Brighter Day', 'Brightening Defence 30', 'Evening Glow'],
+    image: {
+      src: '/images/products/luminesce-range.webp',
+      alt: 'Lamelle Luminesce brightening cleanser, day cream, Brightening Defence 30 and Evening Glow',
+      width: 1024,
+      height: 768,
+    },
   },
   {
-    name: 'Lumen Studio',
-    origin: 'Korea',
-    focus: 'Hydration',
-    description: '',
-    hero: ['Hydra Essence', 'Niacinamide Gel', 'Overnight Mask'],
+    name: 'Nassif MD',
+    focus: 'Exfoliation & hydration',
+    description:
+      'Cleansing, exfoliating pads and serum care in one considered selection. Explore gentle and original Detox Pads alongside the Dawn to Dusk cleanser and Hydro-Screen Serum.',
+    hero: ['Detox Pads - Gentle', 'Detox Pads', 'Dawn to Dusk Cleanser', 'Hydro-Screen Serum'],
+    image: {
+      src: '/images/products/nassif-md-range.webp',
+      alt: 'Nassif MD gentle and original Detox Pads, Dawn to Dusk facial cleanser and Hydro-Screen Serum',
+      width: 1024,
+      height: 768,
+    },
   },
   {
-    name: 'Verre Sun',
-    origin: 'Australia',
-    focus: 'Sun care',
-    description: '',
-    hero: ['Invisible Fluid SPF 50+', 'Tinted Mineral SPF 30', 'Lip Shield'],
+    name: 'Thalgo',
+    focus: 'Marine-inspired skin care',
+    description:
+      'Marine-inspired skincare spanning the Spiruline Boost, Hyalu-Procollagène and Silicium Lift ranges. Discover serums, eye care, masks and moisturisers to complement your treatment routine.',
+    hero: ['Spiruline Boost', 'Hyalu-Procollagène', 'Silicium Lift', 'Collagène 10 000'],
+    image: {
+      src: '/images/products/thalgo-range.webp',
+      alt: 'Thalgo serums, eye care, mask, moisturisers and Collagène 10 000 with a massage tool',
+      width: 1024,
+      height: 768,
+    },
   },
 ]
 

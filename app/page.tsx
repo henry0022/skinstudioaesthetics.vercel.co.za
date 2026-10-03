@@ -8,18 +8,35 @@ const featured = treatments.slice(0, 3)
 export default function HomePage() {
   return (
     <>
-      <section className="max-w-6xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="animate-fade-up">
-            <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-6">
+      <section className="max-w-6xl mx-auto px-6 pt-6 pb-20 md:pt-8 md:pb-28 lg:pt-24">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center lg:items-start">
+          <div className="relative isolate animate-fade-up">
+            {/* Full-bleed background photo, shown only on small/medium screens where this
+                block is stacked above the hero image; hidden at lg where they sit side by side. */}
+            <div
+              className="lg:hidden absolute left-1/2 -top-6 md:-top-8 bottom-0 w-screen -translate-x-1/2 -z-10 overflow-hidden"
+              aria-hidden="true"
+            >
+              <Image
+                src="/images/treatments/basic-deep-cleanse-facial/deep-cleanse-facial-cleansing.webp"
+                alt=""
+                fill
+                loading="eager"
+                sizes="100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-background/30" />
+              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-b from-transparent to-background" />
+            </div>
+            <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-6 max-lg:px-6 max-lg:py-3 max-lg:hero-text-backdrop">
               Cape Town · Skin Studio
             </span>
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.02] font-semibold mb-7 text-balance">
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.02] font-semibold mb-7 text-balance max-lg:[text-shadow:0_2px_24px_var(--color-surface),0_1px_6px_var(--color-surface)]">
               Skin that speaks{' '}
               <span className="italic text-accent">quietly</span>, glows
               loudly.
             </h1>
-            <p className="text-base leading-relaxed text-foreground/70 max-w-md mb-9 font-light">
+            <p className="text-base leading-relaxed text-foreground/70 max-w-md mb-9 font-light max-lg:inline-block max-lg:text-foreground max-lg:px-8 max-lg:py-7 max-lg:hero-text-backdrop">
               Results-driven facials and bespoke rituals, delivered in a calm,
               considered space designed entirely around you.
             </p>
