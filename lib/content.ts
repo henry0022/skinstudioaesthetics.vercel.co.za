@@ -317,8 +317,8 @@ export const treatments: Treatment[] = [
       ],
     },
     pricing: {
-      options: [{ label: 'Per session', price: 'Enquire for pricing' }],
-      packages: [{ label: 'Course of 4 sessions', price: 'Enquire for pricing', note: 'Sessions spaced two weeks apart.' }],
+      options: [{ label: 'Per session (1 ml, face and/or neck)', price: 'R1,850' }],
+      packages: [{ label: 'Course of 4 sessions', price: 'R6,290', note: '15% off. Sessions spaced two weeks apart.' }],
     },
     images: [
       {
