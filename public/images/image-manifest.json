@@ -8,11 +8,11 @@
     "withoutEnlargement": true
   },
   "totals": {
-    "images": 37,
-    "sourceBytes": 76993170,
-    "outputBytes": 3083552,
-    "savedBytes": 73909618,
-    "reductionPercent": 96
+    "images": 39,
+    "sourceBytes": 79649791,
+    "outputBytes": 3195306,
+    "savedBytes": 76454485,
+    "reductionPercent": 95.99
   },
   "images": [
     {
@@ -717,6 +717,44 @@
         "maxLongEdge": 1200
       },
       "intendedUse": "DermaPen microneedling facial treatment"
+    },
+    {
+      "sourcePath": "images 14 Oct 2026/thalgo-facial-treatment.png",
+      "generatedPath": "public/images/treatments/thalgo-source-marine-medispa-treatment/marine-algae-mask-application.webp",
+      "source": {
+        "width": 1087,
+        "height": 1447,
+        "bytes": 1305901,
+        "orientation": 1
+      },
+      "output": {
+        "width": 901,
+        "height": 1200,
+        "bytes": 51140,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Thalgo Source Marine marine algae mask applied with a brush"
+    },
+    {
+      "sourcePath": "images 14 Oct 2026/pixel-treatment.png",
+      "generatedPath": "public/images/treatments/pixel-biothermic-skin-rejuvenation/pixel-facial-treatment.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 1350720,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 60614,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Pixel Biothermic handpiece facial treatment"
     }
   ]
 }

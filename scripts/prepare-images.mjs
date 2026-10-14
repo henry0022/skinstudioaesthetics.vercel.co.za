@@ -221,6 +221,18 @@ const images = [
       maxLongEdge: 1200,
       use: 'DermaPen microneedling facial treatment',
     },
+    {
+      source: 'thalgo-facial-treatment.png',
+      output: 'treatments/thalgo-source-marine-medispa-treatment/marine-algae-mask-application.webp',
+      maxLongEdge: 1200,
+      use: 'Thalgo Source Marine marine algae mask applied with a brush',
+    },
+    {
+      source: 'pixel-treatment.png',
+      output: 'treatments/pixel-biothermic-skin-rejuvenation/pixel-facial-treatment.webp',
+      maxLongEdge: 1200,
+      use: 'Pixel Biothermic handpiece facial treatment',
+    },
   ].map((image) => ({ sourceRoot: october2026SourceRoot, ...image })),
 ]
 

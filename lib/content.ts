@@ -311,7 +311,14 @@ export const treatments: Treatment[] = [
     pricing: {
       options: [{ label: 'Treatment pricing', price: 'Enquire for pricing' }],
     },
-    images: [],
+    images: [
+      {
+        src: '/images/treatments/pixel-biothermic-skin-rejuvenation/pixel-facial-treatment.webp',
+        alt: "A gloved practitioner holding a Pixel Biothermic handpiece to a client's forehead",
+        width: 900,
+        height: 1200,
+      },
+    ],
   },
   {
     slug: 'prx-plus-skin-booster',
@@ -377,6 +384,12 @@ export const treatments: Treatment[] = [
       ],
     },
     images: [
+      {
+        src: '/images/treatments/thalgo-source-marine-medispa-treatment/marine-algae-mask-application.webp',
+        alt: "A gloved practitioner brushing a blue-green marine algae mask onto a client's face",
+        width: 901,
+        height: 1200,
+      },
       {
         src: '/images/treatments/thalgo-anti-ageing-peel-marin/peel-preparation.webp',
         alt: 'A practitioner preparing a peel solution before treatment',
