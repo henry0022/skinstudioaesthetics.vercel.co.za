@@ -53,14 +53,19 @@ export default function AboutPage() {
             Our story
           </h2>
           <p className="text-foreground/70 font-light leading-relaxed mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            {studio.name} is a private skin studio in Eversdal, Cape Town, led
+            by {practitioner.title.toLowerCase()} {practitioner.name}. It was
+            created for clients who want results-focused skin care in a calm,
+            personal setting, where every treatment starts with a careful look
+            at your skin.
           </p>
           <p className="text-foreground/70 font-light leading-relaxed mb-5">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt.
+            Every plan is personalised. We combine facials, medical-grade peels
+            and advanced skin treatments with carefully selected homecare from
+            trusted product houses, and adjust the approach as your skin
+            changes. We confirm suitability at a consultation and explain what
+            each treatment may help with, so you can make informed choices
+            about your skin.
           </p>
         </div>
       </section>
