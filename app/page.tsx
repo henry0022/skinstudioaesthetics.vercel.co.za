@@ -1,51 +1,86 @@
-import Image from 'next/image'
+import Image, { getImageProps } from 'next/image'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import { CtaBand } from '@/components/cta-band'
 import { practitioner, productHouses, studio, treatments } from '@/lib/content'
 
 const featured = treatments.slice(0, 3)
 
+const {
+  props: { srcSet: bannerLandscape },
+} = getImageProps({
+  src: '/images/banners/dropper-serum-landscape.webp',
+  alt: '',
+  width: 1448,
+  height: 1086,
+  sizes: '100vw',
+})
+const { props: bannerImageProps } = getImageProps({
+  src: '/images/banners/dropper-serum-portrait.webp',
+  alt: '',
+  width: 1101,
+  height: 1428,
+  sizes: '112vw',
+  loading: 'eager',
+  fetchPriority: 'high',
+})
+
 export default function HomePage() {
   return (
     <>
-      <section className="max-w-6xl mx-auto px-6 pt-6 pb-20 md:pt-8 md:pb-28 lg:pt-24">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center lg:items-start">
-          <div className="relative isolate animate-fade-up">
-            {/* Full-bleed background photo, shown only on small/medium screens where this
-                block is stacked above the hero image; hidden at lg where they sit side by side. */}
-            <div
-              className="lg:hidden absolute left-1/2 -top-6 md:-top-8 bottom-0 w-screen -translate-x-1/2 -z-10 overflow-hidden"
-              aria-hidden="true"
-            >
-              <Image
-                src="/images/treatments/basic-deep-cleanse-facial/deep-cleanse-facial-cleansing.webp"
-                alt=""
-                fill
-                loading="eager"
-                sizes="100vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-background/30" />
-              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-b from-transparent to-background" />
+      <section className="relative isolate overflow-hidden">
+        {/* Art-directed banner: portrait crop below md, landscape from md up. The text column
+            sits over the light background to the left of the model's face. */}
+        <div
+          className="absolute left-0 top-0 -z-10 w-[112%] aspect-[1101/1428] md:inset-0 md:w-auto md:aspect-auto"
+          aria-hidden="true"
+        >
+          <picture>
+            <source media="(min-width: 768px)" srcSet={bannerLandscape} sizes="100vw" />
+            <img
+              {...bannerImageProps}
+              className="absolute inset-0 h-full w-full object-cover object-top md:object-[35%_35%]"
+            />
+          </picture>
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-background md:hidden" />
+        </div>
+
+        <div className="max-w-6xl mx-auto px-6 pt-8 pb-16 md:py-16 lg:py-20 md:min-h-[40rem] lg:min-h-[44rem] md:flex md:items-center">
+          <div className="animate-fade-up md:max-w-[47%] lg:max-w-[42%]">
+            <div className="min-h-[92vw] md:min-h-0">
+              <span className="flex items-center gap-4 text-[11px] tracking-luxe uppercase text-accent mb-6">
+                Cape Town · Skin Studio
+                <span className="hidden sm:block h-px w-12 bg-accent/60" aria-hidden="true" />
+              </span>
+              <h1 className="font-serif text-[2.6rem] sm:text-6xl lg:text-7xl leading-[1.02] font-semibold mb-7 md:mb-8">
+                <span className="block">Science</span>
+                <span className="block italic text-accent">for visibly</span>
+                <span className="block">healthier</span>
+                <span className="block">skin.</span>
+              </h1>
             </div>
-            <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-6 max-lg:px-6 max-lg:py-3 max-lg:hero-text-backdrop">
-              Cape Town · Skin Studio
-            </span>
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.02] font-semibold mb-7 text-balance max-lg:[text-shadow:0_2px_24px_var(--color-surface),0_1px_6px_var(--color-surface)]">
-              Skin that speaks{' '}
-              <span className="italic text-accent">quietly</span>, glows
-              loudly.
-            </h1>
-            <p className="text-base leading-relaxed text-foreground/70 max-w-md mb-9 font-light max-lg:inline-block max-lg:text-foreground max-lg:px-8 max-lg:py-7 max-lg:hero-text-backdrop">
-              Results-driven facials and bespoke rituals, delivered in a calm,
-              considered space designed entirely around you.
+            <p className="text-[11px] sm:text-xs leading-loose tracking-luxe uppercase text-foreground">
+              Advanced skin solutions
+              <br />
+              for real, lasting results.
             </p>
-            <div className="flex flex-wrap items-center gap-5">
+            <span className="block h-px w-12 bg-foreground/40 my-6" aria-hidden="true" />
+            <p className="text-[15px] sm:text-base leading-relaxed text-foreground/80 mb-9 font-light">
+              Personalised treatments, medical-grade
+              <br />
+              technology and expert care – designed
+              <br />
+              to restore, refine and rejuvenate your
+              <br />
+              skin at every stage.
+            </p>
+            <div className="flex flex-wrap items-center gap-4">
               <Link
                 href="/contact"
-                className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-xs tracking-luxe uppercase transition-all hover:-translate-y-0.5 hover:shadow-lg"
+                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full text-xs tracking-luxe uppercase transition-all hover:-translate-y-0.5 hover:shadow-lg"
               >
                 Book a Treatment
+                <ArrowRight className="size-4" strokeWidth={1.5} aria-hidden="true" />
               </Link>
               <a
                 href={studio.whatsappHref}
@@ -55,22 +90,19 @@ export default function HomePage() {
               >
                 WhatsApp
               </a>
-              <Link
-                href="/treatments"
-                className="text-sm tracking-wide border-b border-foreground/40 pb-1 hover:text-accent hover:border-accent transition-colors"
-              >
-                Explore menu
-              </Link>
             </div>
           </div>
+        </div>
+      </section>
 
+      <section className="max-w-6xl mx-auto px-6 pt-4 pb-20 md:pt-12 md:pb-28">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-16 items-center">
           <div className="relative animate-fade-up">
             <div className="relative w-full h-[440px] sm:h-[520px] rounded-[2rem] overflow-hidden shadow-[0_30px_60px_-30px_rgba(20,58,66,0.4)]">
               <Image
                 src="/images/hero-main.webp"
                 alt={`${practitioner.name}, the practitioner at Skin Studio Aesthetics, in the studio`}
                 fill
-                preload
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
               />
@@ -81,8 +113,10 @@ export default function HomePage() {
                 {practitioner.title}
               </div>
             </div>
+          </div>
 
-            <div className="mt-6 rounded-[1.5rem] border border-foreground/10 bg-surface/80 p-6 shadow-[0_20px_35px_-28px_rgba(20,58,66,0.35)]">
+          <div className="animate-fade-up">
+            <div className="rounded-[1.5rem] border border-foreground/10 bg-surface/80 p-6 shadow-[0_20px_35px_-28px_rgba(20,58,66,0.35)]">
               <p className="text-[11px] tracking-luxe uppercase text-accent mb-3">
                 Discover the true artistry of beautiful,healthy skin
               </p>

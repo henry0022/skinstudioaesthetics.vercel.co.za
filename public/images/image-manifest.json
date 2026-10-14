@@ -8,11 +8,11 @@
     "withoutEnlargement": true
   },
   "totals": {
-    "images": 29,
-    "sourceBytes": 60934764,
-    "outputBytes": 2460596,
-    "savedBytes": 58474168,
-    "reductionPercent": 95.96
+    "images": 35,
+    "sourceBytes": 73026932,
+    "outputBytes": 2963266,
+    "savedBytes": 70063666,
+    "reductionPercent": 95.94
   },
   "images": [
     {
@@ -565,6 +565,120 @@
         "maxLongEdge": 1024
       },
       "intendedUse": "Thalgo product range"
+    },
+    {
+      "sourcePath": "images 14 Oct 2026/banner-1101x1428-1902KB.png",
+      "generatedPath": "public/images/banners/dropper-serum-portrait.webp",
+      "source": {
+        "width": 1101,
+        "height": 1428,
+        "bytes": 1947450,
+        "orientation": 1
+      },
+      "output": {
+        "width": 1101,
+        "height": 1428,
+        "bytes": 73916,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1600
+      },
+      "intendedUse": "Home banner (mobile): serum dropper over relaxed model, portrait"
+    },
+    {
+      "sourcePath": "images 14 Oct 2026/banner-1448x1086-2020KB.png",
+      "generatedPath": "public/images/banners/dropper-serum-landscape.webp",
+      "source": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 2067775,
+        "orientation": 1
+      },
+      "output": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 98558,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1600
+      },
+      "intendedUse": "Home banner (md and up): serum dropper over relaxed model, landscape"
+    },
+    {
+      "sourcePath": "images 14 Oct 2026/banner-1400x1430-1894KB.png",
+      "generatedPath": "public/images/banners/gloved-facial-treatment-portrait.webp",
+      "source": {
+        "width": 1100,
+        "height": 1430,
+        "bytes": 1939272,
+        "orientation": 1
+      },
+      "output": {
+        "width": 1100,
+        "height": 1430,
+        "bytes": 70946,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1600
+      },
+      "intendedUse": "Alternate banner: gloved facial device treatment, portrait"
+    },
+    {
+      "sourcePath": "images 14 Oct 2026/banner-1448x1086-1871KB.png",
+      "generatedPath": "public/images/banners/gloved-facial-treatment-landscape.webp",
+      "source": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 1915481,
+        "orientation": 1
+      },
+      "output": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 73436,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1600
+      },
+      "intendedUse": "Alternate banner: gloved facial device treatment, landscape"
+    },
+    {
+      "sourcePath": "images 14 Oct 2026/is-Clinical-1448x1086-2028KB.png",
+      "generatedPath": "public/images/products/is-clinical-range.webp",
+      "source": {
+        "width": 1448,
+        "height": 1086,
+        "bytes": 2076295,
+        "orientation": 1
+      },
+      "output": {
+        "width": 1200,
+        "height": 900,
+        "bytes": 114912,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "iS Clinical product range"
+    },
+    {
+      "sourcePath": "images 14 Oct 2026/prx-1087x1447-2096KB.png",
+      "generatedPath": "public/images/treatments/prx-plus-skin-booster/prx-plus-treatment.webp",
+      "source": {
+        "width": 1087,
+        "height": 1447,
+        "bytes": 2145895,
+        "orientation": 1
+      },
+      "output": {
+        "width": 901,
+        "height": 1200,
+        "bytes": 70902,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "PRX-PLUS skin booster and brightening gel treatment"
     }
   ]
 }

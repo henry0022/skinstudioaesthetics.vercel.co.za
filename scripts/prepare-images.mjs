@@ -16,6 +16,7 @@ const productSourceRoot = path.join(
   repositoryRoot,
   'Skinstudio Aesthetics Website Images - Product Images (3-10-2026)',
 )
+const october2026SourceRoot = path.join(repositoryRoot, 'images 14 Oct 2026')
 
 const images = [
   {
@@ -171,6 +172,44 @@ const images = [
     maxLongEdge: 1024,
     use,
   })),
+  ...[
+    {
+      source: 'banner-1101x1428-1902KB.png',
+      output: 'banners/dropper-serum-portrait.webp',
+      maxLongEdge: 1600,
+      use: 'Home banner (mobile): serum dropper over relaxed model, portrait',
+    },
+    {
+      source: 'banner-1448x1086-2020KB.png',
+      output: 'banners/dropper-serum-landscape.webp',
+      maxLongEdge: 1600,
+      use: 'Home banner (md and up): serum dropper over relaxed model, landscape',
+    },
+    {
+      source: 'banner-1400x1430-1894KB.png',
+      output: 'banners/gloved-facial-treatment-portrait.webp',
+      maxLongEdge: 1600,
+      use: 'Alternate banner: gloved facial device treatment, portrait',
+    },
+    {
+      source: 'banner-1448x1086-1871KB.png',
+      output: 'banners/gloved-facial-treatment-landscape.webp',
+      maxLongEdge: 1600,
+      use: 'Alternate banner: gloved facial device treatment, landscape',
+    },
+    {
+      source: 'is-Clinical-1448x1086-2028KB.png',
+      output: 'products/is-clinical-range.webp',
+      maxLongEdge: 1200,
+      use: 'iS Clinical product range',
+    },
+    {
+      source: 'prx-1087x1447-2096KB.png',
+      output: 'treatments/prx-plus-skin-booster/prx-plus-treatment.webp',
+      maxLongEdge: 1200,
+      use: 'PRX-PLUS skin booster and brightening gel treatment',
+    },
+  ].map((image) => ({ sourceRoot: october2026SourceRoot, ...image })),
 ]
 
 function toPosix(filePath) {
@@ -207,7 +246,7 @@ function orientedDimensions(metadata) {
 
 async function main() {
   const sourceFiles = (await Promise.all(
-    [sourceRoot, productSourceRoot].map(findPngFiles),
+    [sourceRoot, productSourceRoot, october2026SourceRoot].map(findPngFiles),
   )).flat().sort()
   const mappedSources = images.map((image) =>
     path.join(image.sourceRoot ?? sourceRoot, ...image.source.split('/')),
@@ -224,6 +263,7 @@ async function main() {
   await Promise.all([
     rm(path.join(publicImagesRoot, 'treatments'), { recursive: true, force: true }),
     rm(path.join(publicImagesRoot, 'studio'), { recursive: true, force: true }),
+    rm(path.join(publicImagesRoot, 'banners'), { recursive: true, force: true }),
   ])
 
   const manifestImages = []

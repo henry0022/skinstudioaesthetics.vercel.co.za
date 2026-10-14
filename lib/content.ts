@@ -298,6 +298,38 @@ export const treatments: Treatment[] = [
     ],
   },
   {
+    slug: 'prx-plus-skin-booster',
+    name: 'PRX-PLUS Skin Booster & Brightening Gel',
+    category: 'Advanced Skin Treatments',
+    summary: 'A needle-free skin booster to help refresh tone, texture and firmness, with no peeling or downtime expected.',
+    description: {
+      paragraphs: [
+        'A needle-free gel by WiQo, massaged into the skin to encourage collagen renewal and a brighter, more even-looking tone — with no peeling or downtime expected. It may help with pigmentation, fine lines, loss of firmness and enlarged-looking pores; we confirm suitability at a consultation first.',
+      ],
+      lists: [
+        {
+          heading: 'Recommended protocol',
+          items: [
+            'A course of 4 sessions, spaced two weeks apart',
+            'Barrier-repair homecare between sessions',
+          ],
+        },
+      ],
+    },
+    pricing: {
+      options: [{ label: 'Per session', price: 'Enquire for pricing' }],
+      packages: [{ label: 'Course of 4 sessions', price: 'Enquire for pricing', note: 'Sessions spaced two weeks apart.' }],
+    },
+    images: [
+      {
+        src: '/images/treatments/prx-plus-skin-booster/prx-plus-treatment.webp',
+        alt: "PRX-PLUS gel being applied to a client's forehead, with a PRX-PLUS vial in the foreground",
+        width: 901,
+        height: 1200,
+      },
+    ],
+  },
+  {
     slug: 'thalgo-source-marine-medispa-treatment',
     name: 'Thalgo Source Marine Medispa Treatment',
     category: 'Facials',
@@ -483,6 +515,19 @@ export const productHouses: ProductHouse[] = [
       alt: 'Dimp-less Cellulite Management supplement bottle with capsules',
       width: 1024,
       height: 768,
+    },
+  },
+  {
+    name: 'iS Clinical',
+    focus: 'Cosmeceutical skin care',
+    description:
+      'Cosmeceutical skincare that pairs botanical actives with clinical science. Explore targeted serums and cleansing essentials, and we can help you build a routine around your skin goals.',
+    hero: ['Super Serum Advance+', 'Youth Complex', 'Cleansing Complex', 'Active Serum'],
+    image: {
+      src: '/images/products/is-clinical-range.webp',
+      alt: 'iS Clinical Super Serum Advance+, Youth Complex, Cleansing Complex and Active Serum',
+      width: 1200,
+      height: 900,
     },
   },
   {
