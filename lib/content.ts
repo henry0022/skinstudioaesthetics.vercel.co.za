@@ -391,7 +391,14 @@ export const treatments: Treatment[] = [
       options: [{ label: 'Prices range between', price: 'R650–R1,400' }],
       note: 'Enquire for more information.',
     },
-    images: [],
+    images: [
+      {
+        src: '/images/treatments/medical-grade-peels/peel-brush-application.webp',
+        alt: "A gloved practitioner applying a clear peel solution to a client's cheek with a fan brush",
+        width: 900,
+        height: 1200,
+      },
+    ],
   },
   {
     slug: 'dermapen-microneedling',
@@ -413,7 +420,14 @@ export const treatments: Treatment[] = [
       ],
       note: 'Additional discount on packages of 4 sessions. Package discount of 4 sessions available.',
     },
-    images: [],
+    images: [
+      {
+        src: '/images/treatments/dermapen-microneedling/dermapen-facial-treatment.webp',
+        alt: "A practitioner performing DermaPen microneedling on a client's cheek",
+        width: 900,
+        height: 1200,
+      },
+    ],
   },
 ]
 

@@ -209,6 +209,18 @@ const images = [
       maxLongEdge: 1200,
       use: 'PRX-PLUS skin booster and brightening gel treatment',
     },
+    {
+      source: 'medical-grade-peels.png',
+      output: 'treatments/medical-grade-peels/peel-brush-application.webp',
+      maxLongEdge: 1200,
+      use: 'Medical grade peel applied with a fan brush',
+    },
+    {
+      source: 'DermaPen-Microneedling.png',
+      output: 'treatments/dermapen-microneedling/dermapen-facial-treatment.webp',
+      maxLongEdge: 1200,
+      use: 'DermaPen microneedling facial treatment',
+    },
   ].map((image) => ({ sourceRoot: october2026SourceRoot, ...image })),
 ]
 

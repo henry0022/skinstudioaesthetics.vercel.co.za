@@ -8,11 +8,11 @@
     "withoutEnlargement": true
   },
   "totals": {
-    "images": 35,
-    "sourceBytes": 73026932,
-    "outputBytes": 2963266,
-    "savedBytes": 70063666,
-    "reductionPercent": 95.94
+    "images": 37,
+    "sourceBytes": 76993170,
+    "outputBytes": 3083552,
+    "savedBytes": 73909618,
+    "reductionPercent": 96
   },
   "images": [
     {
@@ -679,6 +679,44 @@
         "maxLongEdge": 1200
       },
       "intendedUse": "PRX-PLUS skin booster and brightening gel treatment"
+    },
+    {
+      "sourcePath": "images 14 Oct 2026/medical-grade-peels.png",
+      "generatedPath": "public/images/treatments/medical-grade-peels/peel-brush-application.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 1974479,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 60940,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "Medical grade peel applied with a fan brush"
+    },
+    {
+      "sourcePath": "images 14 Oct 2026/DermaPen-Microneedling.png",
+      "generatedPath": "public/images/treatments/dermapen-microneedling/dermapen-facial-treatment.webp",
+      "source": {
+        "width": 1086,
+        "height": 1448,
+        "bytes": 1991759,
+        "orientation": 1
+      },
+      "output": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 59346,
+        "format": "webp",
+        "quality": 80,
+        "maxLongEdge": 1200
+      },
+      "intendedUse": "DermaPen microneedling facial treatment"
     }
   ]
 }
