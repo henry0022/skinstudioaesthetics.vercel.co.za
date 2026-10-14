@@ -42,7 +42,7 @@ export default function HomePage() {
               className="absolute inset-0 h-full w-full object-cover object-top md:object-[35%_35%]"
             />
           </picture>
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-background md:hidden" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-background md:h-1/3" />
         </div>
 
         <div className="max-w-6xl mx-auto px-6 pt-8 pb-16 md:py-16 lg:py-20 md:min-h-[40rem] lg:min-h-[44rem] md:flex md:items-center">
