@@ -298,6 +298,22 @@ export const treatments: Treatment[] = [
     ],
   },
   {
+    slug: 'pixel-biothermic-skin-rejuvenation',
+    name: 'Pixel Biothermic Skin Rejuvenation',
+    category: 'Advanced Skin Treatments',
+    summary: 'A Dermafit treatment that uses gentle thermal energy to encourage collagen renewal for smoother, firmer-looking skin.',
+    description: {
+      paragraphs: [
+        'Pixel Biothermic is a skin rejuvenation treatment by Dermafit Skin Science. A fine-pin handpiece delivers controlled warmth into the deeper layers of the skin, which may help stimulate collagen and improve texture, firmness and the look of fine lines, with minimal downtime.',
+        'The device has dedicated face and body handpieces, so each treatment can be tailored to your area of concern. We confirm suitability and a personalised treatment plan at a consultation first.',
+      ],
+    },
+    pricing: {
+      options: [{ label: 'Treatment pricing', price: 'Enquire for pricing' }],
+    },
+    images: [],
+  },
+  {
     slug: 'prx-plus-skin-booster',
     name: 'PRX-PLUS Skin Booster & Brightening Gel',
     category: 'Advanced Skin Treatments',
