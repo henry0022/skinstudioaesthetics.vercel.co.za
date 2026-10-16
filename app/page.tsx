@@ -227,7 +227,7 @@ export default function HomePage() {
                       {treatment.pricing.options[0]?.price ?? 'Enquire for pricing'}
                     </span>
                     <Link
-                      href={`/contact?treatment=${treatment.slug}`}
+                      href={`/contact?treatment=${treatment.slug}#enquiry`}
                       className="text-xs tracking-luxe uppercase text-accent hover:text-ink transition-colors"
                     >
                       Book →

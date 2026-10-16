@@ -46,7 +46,7 @@ export default function PriceListPage() {
                       </h3>
                     </div>
                     <Link
-                      href={`/contact?treatment=${item.slug}`}
+                      href={`/contact?treatment=${item.slug}#enquiry`}
                       className="text-xs tracking-luxe uppercase text-accent hover:text-ink transition-colors whitespace-nowrap"
                     >
                       Enquire →

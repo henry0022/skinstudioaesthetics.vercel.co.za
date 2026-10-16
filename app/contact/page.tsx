@@ -116,7 +116,7 @@ export default function ContactPage() {
           </div>
 
           <div className="bg-background p-9 sm:p-12 lg:p-14">
-            <h2 className="font-serif text-2xl font-semibold mb-6">
+            <h2 id="enquiry" className="scroll-mt-28 font-serif text-2xl font-semibold mb-6">
               Leave us a message:
             </h2>
             <Suspense fallback={null}>
