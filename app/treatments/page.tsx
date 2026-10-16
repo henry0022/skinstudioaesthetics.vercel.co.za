@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CtaBand } from '@/components/cta-band'
 import { PageIntro } from '@/components/page-intro'
+import { TreatmentHashScroll } from '@/components/treatment-hash-scroll'
 import { treatments } from '@/lib/content'
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function TreatmentsPage() {
       />
 
       <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+        <TreatmentHashScroll slugs={treatments.map((treatment) => treatment.slug)} />
         <div className="grid md:grid-cols-3 gap-6">
           {treatments.map((treatment, index) => {
             const cover = treatment.images[0]
@@ -46,7 +48,8 @@ export default function TreatmentsPage() {
             return (
               <article
                 key={treatment.slug}
-                className="bg-surface rounded-3xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-24px_rgba(20,58,66,0.3)]"
+                id={treatment.slug}
+                className="scroll-mt-28 bg-surface rounded-3xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-24px_rgba(20,58,66,0.3)]"
               >
                 {cover ? (
                   <div className="relative w-full aspect-[3/4] overflow-hidden">
