@@ -42,7 +42,7 @@ export default function StudioPage() {
         description="A private, considered space in Cape Town, designed so every visit feels calm and unhurried."
       />
 
-      <section className="max-w-6xl mx-auto px-6 pt-16 md:pt-20">
+      <section className="max-w-6xl mx-auto px-6 pt-6">
         <div className="relative w-full h-[420px] sm:h-[520px] lg:h-[600px] rounded-[2rem] overflow-hidden animate-fade-up">
           <Image
             src={studioImages.overview.src}
@@ -55,7 +55,7 @@ export default function StudioPage() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-20 md:py-24">
+      <section className="max-w-6xl mx-auto px-6 pt-6 pb-20 md:pb-24">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {gallery.map((image) => (
             <div
