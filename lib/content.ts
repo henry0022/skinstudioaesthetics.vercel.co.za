@@ -309,7 +309,10 @@ export const treatments: Treatment[] = [
       ],
     },
     pricing: {
-      options: [{ label: 'Treatment pricing', price: 'Enquire for pricing' }],
+      options: [
+        { label: 'Per session (face and neck)', price: 'R1,850' },
+        { label: 'Spot treatment (per area)', price: 'From R400' },
+      ],
     },
     images: [
       {
@@ -327,7 +330,7 @@ export const treatments: Treatment[] = [
     summary: 'A needle-free skin booster to help refresh tone, texture and firmness, with no peeling or downtime expected.',
     description: {
       paragraphs: [
-        'A needle-free gel by WiQo, massaged into the skin to encourage collagen renewal and a brighter, more even-looking tone — with no peeling or downtime expected. It may help with pigmentation, fine lines, loss of firmness and enlarged-looking pores; we confirm suitability at a consultation first.',
+        'A bio-revitaliser without the needles. This WiQo gel is massaged into the skin, where it works to stimulate collagen from a cellular level and encourage a brighter, more even-looking tone — with no peeling or downtime expected. It may help with pigmentation, fine lines, loss of firmness and enlarged-looking pores; we confirm suitability at a consultation first.',
       ],
       lists: [
         {
