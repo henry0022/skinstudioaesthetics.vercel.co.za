@@ -28,7 +28,7 @@ export type Treatment = {
   slug: string
   name: string
   category: string
-  summary: string
+  summary?: string
   description: {
     paragraphs: string[]
     lists?: { heading?: string; items: string[] }[]
@@ -327,10 +327,9 @@ export const treatments: Treatment[] = [
     slug: 'prx-plus-skin-booster',
     name: 'PRX-PLUS Skin Booster & Brightening Gel',
     category: 'Advanced Skin Treatments',
-    summary: 'A skin booster and brightening gel to help refresh tone, texture and firmness.',
     description: {
       paragraphs: [
-        'PRX-PLUS by WiQo is a bio-revitaliser without the needles that works to stimulate collagen at a cellular level. The gel is massaged into the skin to encourage a brighter, more even-looking tone, with no peeling or downtime expected.',
+        "WiQo's PRX-PLUS Skin Booster & Brightening Gel is a bio-revitaliser without the needles that works to stimulate collagen at a cellular level. The gel is massaged into the skin to encourage a brighter, more even-looking tone, with         no peeling or downtime expected.",
         'It may help with pigmentation, fine lines, loss of firmness and enlarged-looking pores. We confirm suitability at a consultation first.',
       ],
       lists: [

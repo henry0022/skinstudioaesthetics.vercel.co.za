@@ -217,9 +217,11 @@ export default function HomePage() {
                     </span>
                     <h3 className="font-serif text-2xl leading-tight mt-2">{treatment.name}</h3>
                   </div>
-                  <p className="text-sm leading-relaxed text-foreground/65 font-light mb-6">
-                    {treatment.summary}
-                  </p>
+                  {treatment.summary ? (
+                    <p className="text-sm leading-relaxed text-foreground/65 font-light mb-6">
+                      {treatment.summary}
+                    </p>
+                  ) : null}
                   <div className="flex items-center justify-between pt-5 border-t">
                     <span className="font-serif text-xl">
                       {treatment.pricing.options[0]?.price ?? 'Enquire for pricing'}

@@ -71,9 +71,11 @@ export default function TreatmentsPage() {
                       {treatment.name}
                     </h3>
                   </div>
-                  <p className="text-sm leading-relaxed text-foreground/65 font-light mb-4">
-                    {treatment.summary}
-                  </p>
+                  {treatment.summary ? (
+                    <p className="text-sm leading-relaxed text-foreground/65 font-light mb-4">
+                      {treatment.summary}
+                    </p>
+                  ) : null}
                   {treatment.slug === 'bioneedling-spicule-algae' ? (
                     <details className="mb-6 group">
                       <summary className="cursor-pointer list-none text-xs tracking-luxe uppercase text-accent hover:text-ink transition-colors">
