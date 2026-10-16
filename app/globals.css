@@ -88,3 +88,21 @@
 @utility animate-fade-up {
   animation: fade-up 0.8s ease both;
 }
+
+/* Smoothstep fade into the card colour (eased at both ends, no visible start
+   or stop). Used on a 34px overlay that hangs 2px below the image, so 94.1%
+   is exactly the image's bottom edge. */
+@utility fade-to-surface {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in srgb, var(--color-surface) 4.3%, transparent) 11.8%,
+    color-mix(in srgb, var(--color-surface) 15.6%, transparent) 23.5%,
+    color-mix(in srgb, var(--color-surface) 31.6%, transparent) 35.3%,
+    color-mix(in srgb, var(--color-surface) 50%, transparent) 47.1%,
+    color-mix(in srgb, var(--color-surface) 68.4%, transparent) 58.8%,
+    color-mix(in srgb, var(--color-surface) 84.4%, transparent) 70.6%,
+    color-mix(in srgb, var(--color-surface) 95.7%, transparent) 82.4%,
+    var(--color-surface) 94.1%
+  );
+}

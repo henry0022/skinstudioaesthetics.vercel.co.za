@@ -52,7 +52,7 @@ export default function TreatmentsPage() {
                 className="scroll-mt-28 bg-surface rounded-3xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-24px_rgba(20,58,66,0.3)]"
               >
                 {cover ? (
-                  <div className="relative w-full aspect-[3/4] overflow-hidden">
+                  <div className="relative w-full aspect-[3/4]">
                     <Image
                       src={cover.src}
                       alt={cover.alt}
@@ -61,6 +61,9 @@ export default function TreatmentsPage() {
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover"
                     />
+                    {/* Hangs 2px past the image and is solid from the image's edge down, so
+                        the fractional-pixel bottom row of the photo can't show as a grey line. */}
+                    <div className="absolute inset-x-0 -bottom-0.5 h-[calc(2rem+2px)] fade-to-surface" />
                   </div>
                 ) : (
                   <div className="ph w-full aspect-[3/4]">Image coming soon</div>
