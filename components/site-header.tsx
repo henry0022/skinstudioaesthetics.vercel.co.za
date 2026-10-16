@@ -39,6 +39,7 @@ export function SiteHeader() {
               <Link
                 key={link.href}
                 href={link.href}
+                aria-current={pathname === link.href ? 'page' : undefined}
                 className={`transition-colors hover:text-accent ${
                   pathname === link.href ? 'text-accent' : ''
                 }`}
@@ -66,23 +67,30 @@ export function SiteHeader() {
         </div>
 
         {open && (
-          <nav className="lg:hidden border-t bg-background px-6 py-6 flex flex-col gap-5 text-sm tracking-wide">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className={`transition-colors hover:text-accent ${
-                  pathname === link.href ? 'text-accent' : ''
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <nav className="lg:hidden border-t bg-background px-6 py-5 flex flex-col gap-1 text-sm tracking-wide">
+            {navLinks.map((link) => {
+              const active = pathname === link.href
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={active ? 'page' : undefined}
+                  className={`-mx-4 rounded-xl px-4 py-2.5 transition-colors ${
+                    active ? 'bg-muted text-ink font-medium' : 'hover:text-accent'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="bg-primary text-primary-foreground px-6 py-3 rounded-full text-xs tracking-luxe uppercase text-center mt-1"
+              aria-current={pathname === '/contact' ? 'page' : undefined}
+              className={`bg-primary text-primary-foreground px-6 py-3 rounded-full text-xs tracking-luxe uppercase text-center mt-3 ${
+                pathname === '/contact' ? 'ring-2 ring-accent ring-offset-2 ring-offset-background' : ''
+              }`}
             >
               Enquire
             </Link>
