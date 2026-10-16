@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { studio } from '@/lib/content'
+import { studio, studioMapHref } from '@/lib/content'
 
 const explore = [
   { href: '/about', label: 'About Us' },
@@ -47,7 +47,18 @@ export function SiteFooter() {
             Visit
           </h2>
           <ul className="space-y-3 text-sm font-light text-background/75">
-            <li>{studio.address}</li>
+            <li>
+              {studio.address}
+              <a
+                href={studioMapHref}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="View the studio on Google Maps (opens in a new tab)"
+                className="block mt-1.5 w-fit text-[11px] tracking-luxe uppercase text-primary hover:text-background transition-colors"
+              >
+                View on map ↗
+              </a>
+            </li>
             {studio.hours.map((hour) => (
               <li key={hour}>{hour}</li>
             ))}

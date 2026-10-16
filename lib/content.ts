@@ -17,6 +17,9 @@ export const studio = {
   instagram: 'https://instagram.com',
 }
 
+// Derived from the approved address, so it stays in sync if the address changes.
+export const studioMapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(studio.address)}`
+
 export type TreatmentImage = {
   src: string
   alt: string
