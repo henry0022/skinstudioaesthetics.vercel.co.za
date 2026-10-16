@@ -97,11 +97,13 @@ export default function StudioPage() {
         </div>
       </section>
 
-      <CtaBand
-        eyebrow="Visit us"
-        title="Come see the studio"
-        description="Book a complimentary skin reading and experience the space for yourself."
-      />
+      <div className="pt-24">
+        <CtaBand
+          eyebrow="Visit us"
+          title="Come see the studio"
+          description="Book a complimentary skin reading and experience the space for yourself."
+        />
+      </div>
     </>
   )
 }
