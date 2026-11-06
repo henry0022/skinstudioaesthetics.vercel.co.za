@@ -35,7 +35,7 @@ Everything below must be replaced for a new client. Find leftovers with `grep -r
   - Contact: intro, "We reply within one working day", and the **Google Maps embed `src`**.
 - **Theme:** colour tokens in `app/globals.css`. The ink colour also appears hard-coded as `rgba(20, 58, 66, …)` in `--color-border`, in `.ph`, and in several `shadow-[…]` arbitrary values in `app/page.tsx`, `app/treatments/page.tsx`, `app/product-houses/page.tsx` and `app/contact/page.tsx`.
 - **One-off logic:** `app/treatments/page.tsx` collapses the description only for the slug `bioneedling-spicule-algae`.
-- **Assets:** `public/images/**`, the source image folders at the repo root, the `images` mapping in `scripts/prepare-images.mjs`, `Price list.pdf` / `Price list copy.md`.
+- **Assets:** `app/icon.png`, `public/images/**`, the source image folders at the repo root, the `images` mapping in `scripts/prepare-images.mjs`, `Price list.pdf` / `Price list copy.md`.
 - **Infrastructure:** Vercel project, domain, `RESEND_API_KEY` / `ENQUIRY_TO_EMAIL` / `ENQUIRY_FROM_EMAIL`, and a verified Resend sender domain.
 
 ## Suggested extraction steps
@@ -48,7 +48,7 @@ Do this in a new repository (or a `template` branch), never on this client's `ma
 4. **Generalise the one-off.** Replace the `bioneedling-spicule-algae` check with an optional `collapseDescription?: boolean` on `Treatment`. Consider renaming `treatments` to `services` if the template will serve non-skin businesses.
 5. **Make image roots config-driven.** Read source roots from the `images` entries (or a small config) instead of hard-coded constants, and drop the gitignored archival-folder dependency.
 6. **Replace content with neutral samples.** Keep two or three example services and one product house, plus `images: []` entries to show the "Image coming soon" placeholder.
-7. **Add the missing launch basics.** This site has none yet: `app/icon.png` / favicon, `app/opengraph-image.*`, `app/robots.ts`, `app/sitemap.ts`. Check the current `node_modules/next/dist/docs/` for the file conventions.
+7. **Replace the icon and add missing launch basics.** Replace `app/icon.png` with the new client's icon. This site still needs `app/opengraph-image.*`, `app/robots.ts` and `app/sitemap.ts`. Check the current `node_modules/next/dist/docs/` for the file conventions.
 8. **Document the client checklist** below in the template's README.
 
 ## New-client checklist

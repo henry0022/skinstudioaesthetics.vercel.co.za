@@ -52,12 +52,14 @@ Client: **Bianca Mc Cree**, Dermal Esthetician, Eversdal, Cape Town. Feedback co
 - **Enquiry email.** Confirm `RESEND_API_KEY`, `ENQUIRY_TO_EMAIL` and `ENQUIRY_FROM_EMAIL` are set in Vercel Production. Without them the form shows "Thank you" but sends nothing (an earlier commit noted "no inbox yet"). Don't send a test enquiry that could reach Bianca without asking the maintainer first.
 - `studio.email` is commented out on the contact page and in the footer until an inbox exists.
 - `studio.instagram` is a placeholder (`https://instagram.com`) and isn't rendered anywhere yet.
-- No favicon, social share (Open Graph) image, `robots.txt` or sitemap yet. Worth adding around release; see `docs/template-extraction.md`, step 7.
+- Browser/search icon added at `app/icon.png`. Google controls when it appears in search results after deployment and recrawling.
+- No social share (Open Graph) image, `robots.txt` or sitemap yet. Worth adding around release; see `docs/template-extraction.md`, step 7.
 
 ## Change log (recent)
 
 | Date | Change |
 | --- | --- |
+| 6 Nov 2026 | Added a square browser/search icon at `app/icon.png` |
 | 6 Nov 2026 | Home page reservations CTA restyled as a plain, spaced section |
 | 6 Nov 2026 | Footer cellphone number; removed Product Houses section and two requested cards from the home page |
 | 16 Oct 2026 | Map link under the footer address; README, agent guide and these docs |

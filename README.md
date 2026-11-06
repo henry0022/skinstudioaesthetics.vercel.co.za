@@ -46,6 +46,7 @@ Copy `.env.example` to `.env.local` if you need to test email delivery locally. 
 ```text
 app/
   layout.tsx            Root layout: fonts, site metadata, header and footer
+  icon.png              Square Skin Studio Aesthetics browser and search icon
   globals.css           Tailwind v4 theme tokens (colours, fonts) and custom utilities
   page.tsx              Home: art-directed hero banner, practitioner bio, featured treatments, values and reservation CTA
   about/ studio/ treatments/ price-list/ product-houses/ contact/
