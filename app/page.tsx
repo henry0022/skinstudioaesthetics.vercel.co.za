@@ -2,7 +2,7 @@ import Image, { getImageProps } from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { CtaBand } from '@/components/cta-band'
-import { practitioner, productHouses, studio, treatments } from '@/lib/content'
+import { practitioner, studio, treatments } from '@/lib/content'
 
 const featured = treatments.slice(0, 3)
 
@@ -270,8 +270,6 @@ export default function HomePage() {
             {[
               ['Skin reading first', 'Every visit starts with an honest assessment — never a template.'],
               ['Medical-grade only', 'Products and devices chosen for evidence, not marketing.'],
-              ['Zero pressure', 'We recommend what you need, and nothing you do not.'],
-              ['Aftercare included', 'A written home routine you can actually keep up with.'],
             ].map(([title, copy]) => (
               <li
                 key={title}
@@ -287,40 +285,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <div className="flex items-end justify-between flex-wrap gap-6 mb-12">
-          <div>
-            <span className="inline-block text-[11px] tracking-luxe uppercase text-accent mb-4">
-              Product Houses
-            </span>
-            <h2 className="font-serif text-4xl sm:text-5xl font-semibold">
-              The brands we retail
-            </h2>
-          </div>
-          <Link
-            href="/product-houses"
-            className="text-sm tracking-wide border-b border-foreground/40 pb-1 hover:text-accent hover:border-accent transition-colors"
-          >
-            See all houses
-          </Link>
-        </div>
-
-        <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {productHouses.map((house) => (
-            <li
-              key={house.name}
-              className="bg-surface rounded-2xl px-6 py-8 text-center"
-            >
-              <div className="font-serif text-xl">{house.name}</div>
-              <div className="text-[10px] tracking-luxe uppercase text-foreground/45 mt-2">
-                {house.focus}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <CtaBand title="Book your glow" />
+      <CtaBand title="Book your glow" variant="plain" />
     </>
   )
 }

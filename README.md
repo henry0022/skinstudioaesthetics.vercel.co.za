@@ -47,12 +47,12 @@ Copy `.env.example` to `.env.local` if you need to test email delivery locally. 
 app/
   layout.tsx            Root layout: fonts, site metadata, header and footer
   globals.css           Tailwind v4 theme tokens (colours, fonts) and custom utilities
-  page.tsx              Home: art-directed hero banner, practitioner bio, featured treatments, values, product houses
+  page.tsx              Home: art-directed hero banner, practitioner bio, featured treatments, values and reservation CTA
   about/ studio/ treatments/ price-list/ product-houses/ contact/
   api/enquiry/route.ts  POST handler: validation, honeypot, per-IP rate limit, Resend email
 components/
   site-header.tsx       Promo strip, sticky nav, mobile menu (current page highlighted)
-  site-footer.tsx       Explore links, address (+ map link), hours, phone
+  site-footer.tsx       Explore links, address (+ map link), hours, landline and cellphone
   page-intro.tsx        Shared page title band
   cta-band.tsx          Shared call-to-action box (has no top padding; see AGENTS.md)
   enquiry-form.tsx      Client form; pre-selects ?treatment=<slug>

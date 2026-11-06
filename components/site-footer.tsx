@@ -63,6 +63,7 @@ export function SiteFooter() {
               <li key={hour}>{hour}</li>
             ))}
             <li>{studio.phone}</li>
+            <li>{studio.whatsapp}</li>
             {/* <li>{studio.email}</li> */}
           </ul>
         </div>

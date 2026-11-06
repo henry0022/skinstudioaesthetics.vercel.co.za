@@ -58,6 +58,8 @@ Client: **Bianca Mc Cree**, Dermal Esthetician, Eversdal, Cape Town. Feedback co
 
 | Date | Change |
 | --- | --- |
+| 6 Nov 2026 | Home page reservations CTA restyled as a plain, spaced section |
+| 6 Nov 2026 | Footer cellphone number; removed Product Houses section and two requested cards from the home page |
 | 16 Oct 2026 | Map link under the footer address; README, agent guide and these docs |
 | 16 Oct 2026 | Treatment enquiry links scroll to the enquiry form (`#enquiry`) |
 | 16 Oct 2026 | Mobile menu highlights the current page |
